@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="background-color: pink">
+  <head>
+    <meta charset="utf-8">
+    <title>Forest</title>
+    <meta name="description" content="Forest">
+    <script src="../aframe.min.js"></script>
+    <script src="../aframe-environment-component.min.js"></script>
+    <script src="../aframe-particle-system-component.min.js"></script>
+
+
+    <script>
+      function bebe(){
+                screen.orientation.unlock();
+            }
+    </script>
+
+  </head>
+  <body onload="bebe()"  style="background-color: pink">
+    <script type="text/javascript" src="../cordova.js"></script>
+    
+
+    <a-scene vr-mode-ui="enabled: false">
+<!-- 
+      
+
+      <a-entity position="0 2.25 -15" particle-system="preset: dust; particleCount: 1000"></a-entity>
+
+      <a-entity light="type: directional; color: white; intensity: 1" position="0 1 0"></a-entity>
+
+      
+
+     
+
+      <a-entity light="type: directional; color: white; intensity: 1; castShadow: false;"
+       position="0 -1 0"></a-entity>
+
+       <a-entity light="type: directional; color: red; intensity: 1; castShadow: false;"
+       position="0 2 0"></a-entity>
+
+       <a-entity light="type: directional; color:orange; intensity: 1; castShadow: false;"
+       position="1 2 0"></a-entity>
+       
+      <a-entity id="rig" position="25 5 0" rotation="0 90 0">
+        <a-camera id="camera"></a-camera>
+      </a-entity> -->
+
+      <a-entity light="type: hemisphere; color: gray" position="0 5 0"></a-entity>
+
+      <a-entity position="0 0 0" environment="preset: forest;grid: none;skyType: gradient; horizonColor: violet; groundColor: #043301; groundColor2: #695637;groundTexture: walkernoise; ground: canyon"></a-entity>
+
+      <a-entity gltf-model="#trees" position="0 0 0" animation=""> </a-entity>
+      <a-assets> 
+        <a-asset-item id="trees" src="trees.gltf"> </a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model="#ulo" position="7 0 0" animation="property: rotation;easing: linear; to: 0 360 0; loop: true; dur: 10000"> </a-entity>
+      <a-assets> 
+        <a-asset-item id="ulo" src="ulo.gltf"> </a-asset-item>
+      </a-assets>
+
+<a-entity sound="src: url(river.mp3); autoplay: true; loop: true" position="7 0 0"></a-entity>
+
+<a-entity position="0 2.25 -15" particle-system="preset: dust; color: white, green; particleCount: 500"></a-entity>
+
+   
+
+    </a-scene>
+
+
+
+ 
+
+
+<!--     <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene> -->
+
+
+
+
+
+
+
+  </body>
+</html>

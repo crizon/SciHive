@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>crzn.io</title>
+	<link rel="shortcut icon" href="media/image/favicon.ico">
+
+	<link rel="stylesheet" href="../../vendor/jquery.mobile-1.4.5.min.css" />
+	<script src="../../vendor/jquery-1.11.1.min.js"></script>
+	<script src="../../vendor/jquery.mobile-1.4.5.min.js"></script>
+	<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/own.css">
+
+	<style>
+					.texts {style="font-family: Arial;
+					font-style: none;
+					font-weight: bolder;
+					text-decoration: none;
+					text-transform: none;
+					color: white;
+					text-shadow: 0 0 0"}
+	</style>
+
+	<style type="text/css">
+						.main-bg{
+							background-image:url(media/image/main-bg.jpg);
+							background-size: 100%;
+						}
+
+
+						.feeter {
+							position: fixed;
+							left: 0;
+							bottom: 0;
+							width: 100%;
+						}
+
+						.bgc{background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);"}
+
+	</style>
+
+
+
+
+<style>
+img:active {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+
+
+
+
+
+
+            <!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+              input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+
+
+
+
+
+
+<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../media/image/loader.gif) center no-repeat #fff;
+}
+</style>
+
+
+<script type="text/javascript">
+  //paste this code under the head tag or in a separate js file.
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  
+</script>
+</head>
+
+<body class="main-bg" onload="musicplay(),onLoad()" >
+
+ <div class="se-pre-con"></div>
+
+	<audio id="bgm" loop="true" hidden="true" src="../media/audio/ABZoo BGM.mp3" type="audio/mp3"></audio> 
+	  <script>
+		  var crznbgm = document.getElementById("bgm");
+		  function musicplay() {crznbgm.play();}
+	  </script> 
+
+
+
+
+	<audio id="poot" hidden="true" src="../media/audio/poot.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var crznpoot = document.getElementById("poot");
+		  function pootplay() {crznpoot.play();}
+	  </script> 
+
+
+
+<!-- Start of main page -->
+<div data-role="page" id="main_menu" class="main-bg">
+
+
+
+
+  
+
+		<center>
+				<div role="header" class="header" style="margin-top: 6px">
+					<center><img onclick="HIplay()" ontouchstart="HIplay()" src="media/image/main.png" style="width: 97%" alt="Responsive image"></center>
+
+
+						<audio id="hi" hidden="true" src="media/audio/welcome.mp3" type="audio/mp3"> </audio>
+						  <script>
+							  var hiplay = document.getElementById("hi");
+							  function HIplay() {hiplay.play();}
+						  </script> 
+
+				</div><!-- /content -->
+
+
+				<div class="align-bottom" style="background: rgba(0,0,0,0); margin-right,margin-left: 25px ">
+
+					
+
+					<a href="#letter_A" data-transition="pop" ><button onclick="Startplay()" class="btn-block next-btn texts " style="width:185px; height: 60px;border: 1px solid #6a2d65; margin-bottom: 5px"> Start </button></a>
+
+
+						<audio id="start" hidden="true" src="../media/audio/start.mp3" type="audio/mp3"> </audio>
+						  <script>
+							  var startplay = document.getElementById("start");
+							  function Startplay() {startplay.play();}
+						  </script> 
+
+
+					<br>
+					<a href="#crzn_help" data-transition="flip" ><button onclick="pootplay()" class="next-btn texts" style="width:185px; height: 60px;border: 1px solid #6a2d65;margin-bottom: 5px"> How </button></a>
+					
+
+<br><br>
+					
+				</div><!-- /footer -->
+
+		</center>
+
+
+</div> <!-- /page -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start of help -->
+<div data-role="page" id="crzn_help" class="main-bg">
+
+	<button class="btn-success btn btn-block" disabled="disabled">Instructions</button>
+
+	<div class="container">
+		<center>
+		<img src="media/image/help.png" style="width: 100%">
+		</center>
+	</div>
+
+	<center>
+		<a href="#main_menu"><button onclick="pootplay()" class="btn-lg texts" style="background-color: green;border-radius: 30%"> ⌂ </button></a>
+	</center>
+</div><!-- /page -->
+
+
+
+
+
+
+
+
+
+
+<!-- LETTERS ---------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<!--   Start of letter A  -->
+<div data-role="page" id="letter_A" class="bgc">
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/aa.png" ontouchstart="Aplay()" onclick="Aplay()" style="width: 100%">
+		<br><br>
+		<img src="media/image/Animals/alligatorr.png" ontouchstart="AAplay()" onclick="AAplay()" style="width: 100%">
+		</center>
+
+	</div>
+
+	
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#main_menu" onclick="pootplay()" data-transition="pop" data-direction="reverse"><button class="back-btn  align-bottom" style="float:left; width: 50px;"> back </button></a>
+
+		<a href="#letter_B" data-transition="flip"><button onclick="pootplay()" class="next-btn align-bottom" style="float:right; margin-right: 10px; width: 50px"> 	next </button></a>
+
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+
+	</div>
+
+
+
+	<audio id="aname" hidden="true" src="media/audio/name/a.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var aplay = document.getElementById("aname");
+		  function Aplay() {aplay.play();}
+	  </script> 
+
+	<audio id="asound" hidden="true" src="media/audio/sound/aa.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var aaplay = document.getElementById("asound");
+		  function AAplay() {aaplay.play();}
+	  </script> 
+
+</div>
+
+
+
+
+
+
+
+
+<!--   Start of letter B  -->
+<div data-role="page" id="letter_B" class="bgc">
+
+
+	<div role="main" class="ui-content">
+
+		<center>
+		<img src="media/image/name/bb.png" style="width: 90%;" ontouchstart="Bplay()" onclick="Bplay()" >	
+		<br>
+		<img src="media/image/Animals/bear.png" style="width: 90%" ontouchstart="BBplay()" onclick="BBplay()" >
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_A" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back </button></a>
+		<a href="#letter_C" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next </button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+
+	<audio id="bname" hidden="true" src="media/audio/name/b.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var bplay = document.getElementById("bname");
+		  function Bplay() {bplay.play();}
+	  </script> 
+
+	<audio id="bsound" hidden="true" src="media/audio/sound/bb.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var bbplay = document.getElementById("bsound");
+		  function BBplay() {bbplay.play();}
+	  </script> 
+
+
+</div>
+
+
+
+
+
+<!--   Start of letter C  -->
+<div data-role="page" id="letter_C" class="bgc">
+
+
+	<div role="main" class="ui-content">
+
+		<center>
+		<img src="media/image/name/cc.png" style="width: 95%" ontouchstart="Cplay()" onclick="Cplay()">
+		<br><br>
+		<img src="media/image/Animals/cow.png" style="width: 100%" ontouchstart="CCplay()" onclick="CCplay()">
+		</center>
+
+	</div>
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_B" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back </button></a>
+		<a href="#letter_D" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px">next </button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+	<audio id="cname" hidden="true" src="media/audio/name/c.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var cplay = document.getElementById("cname");
+		  function Cplay() {cplay.play();}
+	  </script> 
+
+	<audio id="csound" hidden="true" src="media/audio/sound/cc.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ccplay = document.getElementById("csound");
+		  function CCplay() {ccplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter D  -->
+<div data-role="page" id="letter_D" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/dd.png" style="width: 100%" ontouchstart="Dplay()" onclick="Dplay()">
+		<br><br>
+		<img src="media/image/Animals/dolphin.png" style="width: 100%" ontouchstart="DDplay()" onclick="DDplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_C" data-transition="flow" data-direction="reverse"><button  onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back </button></a>
+		<a href="#letter_E" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next </button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>	
+	</div>
+
+
+	<audio id="dname" hidden="true" src="media/audio/name/d.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var dplay = document.getElementById("dname");
+		  function Dplay() {dplay.play();}
+	  </script> 
+
+	<audio id="dsound" hidden="true" src="media/audio/sound/dd.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ddplay = document.getElementById("dsound");
+		  function DDplay() {ddplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter E  -->
+<div data-role="page" id="letter_E" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ee.png" style="width: 95%" ontouchstart="Eplay()" onclick="Eplay()">
+		<br><br>
+		<img src="media/image/Animals/elephant.png" style="width: 100%" ontouchstart="EEplay()" onclick="EEplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_D" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_F" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+	<audio id="ename" hidden="true" src="media/audio/name/e.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var eplay = document.getElementById("ename");
+		  function Eplay() {eplay.play();}
+	  </script> 
+
+	<audio id="esound" hidden="true" src="media/audio/sound/ee.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var eeplay = document.getElementById("esound");
+		  function EEplay() {eeplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+<!--   Start of letter F  -->
+<div data-role="page" id="letter_F" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ff.png" style="width: 100%" ontouchstart="Fplay()" onclick="Fplay()">
+		<br><br>
+		<img src="media/image/Animals/frog.png" style="width: 100%" ontouchstart="FFplay()" onclick="FFplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_E" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_G" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+	<audio id="fname" hidden="true" src="media/audio/name/f.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var fplay = document.getElementById("fname");
+		  function Fplay() {fplay.play();}
+	  </script> 
+
+	<audio id="fsound" hidden="true" src="media/audio/sound/ff.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ffplay = document.getElementById("fsound");
+		  function FFplay() {ffplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter G  -->
+<div data-role="page" id="letter_G" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/gg.png" style="width: 90%" ontouchstart="Gplay()" onclick="Gplay()">
+		<br><br>
+		<img src="media/image/Animals/goat.png" style="width: 75%" ontouchstart="GGplay()" onclick="GGplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_F" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_H" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+	<audio id="gname" hidden="true" src="media/audio/name/g.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var gplay = document.getElementById("gname");
+		  function Gplay() {gplay.play();}
+	  </script> 
+
+	<audio id="gsound" hidden="true" src="media/audio/sound/gg.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ggplay = document.getElementById("gsound");
+		  function GGplay() {ggplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter H  -->
+<div data-role="page" id="letter_H" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/hh.png" style="width: 90%" ontouchstart="Hplay()" onclick="Hplay()">
+		<br><br>
+		<img src="media/image/Animals/hippo.png" style="width: 83%" ontouchstart="HHplay()" onclick="HHplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_G" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_I" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="hname" hidden="true" src="media/audio/name/h.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var hplay = document.getElementById("hname");
+		  function Hplay() {hplay.play();}
+	  </script> 
+
+	<audio id="hsound" hidden="true" src="media/audio/sound/hh.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var hhplay = document.getElementById("hsound");
+		  function HHplay() {hhplay.play();}
+	  </script> 
+
+</div>
+
+
+
+
+
+
+<!--   Start of letter I  -->
+<div data-role="page" id="letter_I" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ii.png" style="width: 95%" ontouchstart="Iplay()" onclick="Iplay()">
+		<br><br>
+		<img src="media/image/Animals/ibis.png" style="width: 100%" ontouchstart="IIplay()" onclick="IIplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_H" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_J" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+	<audio id="iname" hidden="true" src="media/audio/name/i.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var iplay = document.getElementById("iname");
+		  function Iplay() {iplay.play();}
+	  </script> 
+
+	<audio id="isound" hidden="true" src="media/audio/sound/ii.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var iiplay = document.getElementById("isound");
+		  function IIplay() {iiplay.play();}
+	  </script> 
+
+</div>
+
+
+
+
+
+
+
+
+<!--   Start of letter J  -->
+<div data-role="page" id="letter_J" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/jj.png" style="width: 100%" ontouchstart="Jplay()" onclick="Jplay()">
+		<br><br>
+		<img src="media/image/Animals/jaguar.png" style="width: 100%" ontouchstart="JJplay()" onclick="JJplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_I" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_K" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+	<audio id="jname" hidden="true" src="media/audio/name/j.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var jplay = document.getElementById("jname");
+		  function Jplay() {jplay.play();}
+	  </script> 
+
+	<audio id="jsound" hidden="true" src="media/audio/sound/jj.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var jjplay = document.getElementById("jsound");
+		  function JJplay() {jjplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter K  -->
+<div data-role="page" id="letter_K" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/kk.png" style="width: 100%" ontouchstart="Kplay()" onclick="Kplay()">
+		<br><br>
+		<img src="media/image/Animals/kangaroo.png" style="width: 100%" ontouchstart="KKplay()" onclick="KKplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_J" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_L" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="kname" hidden="true" src="media/audio/name/k.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var kplay = document.getElementById("kname");
+		  function Kplay() {kplay.play();}
+	  </script> 
+
+	<audio id="ksound" hidden="true" src="media/audio/sound/kk.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var kkplay = document.getElementById("ksound");
+		  function KKplay() {kkplay.play();}
+	  </script> 
+
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter L  -->
+<div data-role="page" id="letter_L" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ll.png" style="width: 80%" ontouchstart="Lplay()" onclick="Lplay()">
+		<br><br>
+		<img src="media/image/Animals/lion.png" style="width: 95%" ontouchstart="LLplay()" onclick="LLplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_K" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_M" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="lname" hidden="true" src="media/audio/name/l.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var lplay = document.getElementById("lname");
+		  function Lplay() {lplay.play();}
+	  </script> 
+
+	<audio id="lsound" hidden="true" src="media/audio/sound/ll.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var llplay = document.getElementById("lsound");
+		  function LLplay() {llplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+<!--   Start of letter M  -->
+<div data-role="page" id="letter_M" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/mm.png" style="width: 100%" ontouchstart="Mplay()" onclick="Mplay()">
+		<br><br>
+		<img src="media/image/Animals/monkey.png" style="width: 100%" ontouchstart="MMplay()" onclick="MMplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_L" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_N" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="mname" hidden="true" src="media/audio/name/m.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var mplay = document.getElementById("mname");
+		  function Mplay() {mplay.play();}
+	  </script> 
+
+	<audio id="msound" hidden="true" src="media/audio/sound/mm.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var mmplay = document.getElementById("msound");
+		  function MMplay() {mmplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter N  -->
+<div data-role="page" id="letter_N" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/nn.png" style="width: 100%" ontouchstart="Nplay()" onclick="Nplay()">
+		<br><br>
+		<img src="media/image/Animals/newt.png" style="width: 100%" ontouchstart="NNplay()" onclick="NNplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_M" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_O" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="nname" hidden="true" src="media/audio/name/n.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var nplay = document.getElementById("nname");
+		  function Nplay() {nplay.play();}
+	  </script> 
+
+	<audio id="nsound" hidden="true" src="media/audio/sound/nn.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var nnplay = document.getElementById("nsound");
+		  function NNplay() {nnplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter O -->
+<div data-role="page" id="letter_O" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/oo.png" style="width: 80%" ontouchstart="Oplay()" onclick="Oplay()">
+		<br><br>
+		<img src="media/image/Animals/owl.png" style="width: 55%" ontouchstart="OOplay()" onclick="OOplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_N" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_P" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="oname" hidden="true" src="media/audio/name/o.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var oplay = document.getElementById("oname");
+		  function Oplay() {oplay.play();}
+	  </script> 
+
+	<audio id="osound" hidden="true" src="media/audio/sound/oo.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ooplay = document.getElementById("osound");
+		  function OOplay() {ooplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter P -->
+<div data-role="page" id="letter_P" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/pp.png" style="width: 90%" ontouchstart="Pplay()" onclick="Pplay()">
+		<br><br>
+		<img src="media/image/Animals/panda.png" style="width: 90%" ontouchstart="PPplay()" onclick="PPplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_O" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_Q" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="pname" hidden="true" src="media/audio/name/p.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var pplay = document.getElementById("pname");
+		  function Pplay() {pplay.play();}
+	  </script> 
+
+	<audio id="psound" hidden="true" src="media/audio/sound/pp.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ppplay = document.getElementById("psound");
+		  function PPplay() {ppplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter Q -->
+<div data-role="page" id="letter_Q" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/qq.png" style="width: 100%" ontouchstart="Qplay()" onclick="Qplay()">
+		<br><br>
+		<img src="media/image/Animals/quail.png" style="width: 100%" ontouchstart="QQplay()" onclick="QQplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_P" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_R" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="qname" hidden="true" src="media/audio/name/q.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var qplay = document.getElementById("qname");
+		  function Qplay() {qplay.play();}
+	  </script> 
+
+	<audio id="qsound" hidden="true" src="media/audio/sound/qq.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var qqplay = document.getElementById("qsound");
+		  function QQplay() {qqplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+<!--   Start of letter R -->
+<div data-role="page" id="letter_R" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/rr.png" style="width: 100%" ontouchstart="Rplay()" onclick="Rplay()">
+		<br><br>
+		<img src="media/image/Animals/rabbit.png" style="width: 100%" ontouchstart="RRplay()" onclick="RRplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_Q" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_S" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="rname" hidden="true" src="media/audio/name/r.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var rplay = document.getElementById("rname");
+		  function Rplay() {rplay.play();}
+	  </script> 
+
+	<audio id="rsound" hidden="true" src="media/audio/sound/rr.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var rrplay = document.getElementById("rsound");
+		  function RRplay() {rrplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+
+<!--   Start of letter S-->
+<div data-role="page" id="letter_S" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ss.png" style="width: 100%" ontouchstart="Splay()" onclick="Splay()">
+		<br><br>
+		<img src="media/image/Animals/snake.png" style="width: 100%" ontouchstart="SSplay()" onclick="SSplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_R" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_T" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="sname" hidden="true" src="media/audio/name/s.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var splay = document.getElementById("sname");
+		  function Splay() {splay.play();}
+	  </script> 
+
+	<audio id="ssound" hidden="true" src="media/audio/sound/ss.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ssplay = document.getElementById("ssound");
+		  function SSplay() {ssplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter T -->
+<div data-role="page" id="letter_T" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/tt.png" style="width: 80%" ontouchstart="Tplay()" onclick="Tplay()">
+		<br><br>
+		<img src="media/image/Animals/tiger.png" style="width: 60%" ontouchstart="TTplay()" onclick="TTplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_S" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_U" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="tname" hidden="true" src="media/audio/name/t.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var tplay = document.getElementById("tname");
+		  function Tplay() {tplay.play();}
+	  </script> 
+
+	<audio id="tsound" hidden="true" src="media/audio/sound/tt.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var ttplay = document.getElementById("tsound");
+		  function TTplay() {ttplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+<!--   Start of letter U -->
+<div data-role="page" id="letter_U" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/uu.png" style="width: 100%" ontouchstart="Uplay()" onclick="Uplay()">
+		<br><br>
+		<img src="media/image/Animals/umbrellabird.png" style="width: 100%" ontouchstart="UUplay()" onclick="UUplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_T" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_V" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="uname" hidden="true" src="media/audio/name/u.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var uplay = document.getElementById("uname");
+		  function Uplay() {uplay.play();}
+	  </script> 
+
+	<audio id="usound" hidden="true" src="media/audio/sound/uu.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var uuplay = document.getElementById("usound");
+		  function UUplay() {uuplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+
+<!--   Start of letter V -->
+<div data-role="page" id="letter_V" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/vv.png" style="width: 100%" ontouchstart="Vplay()" onclick="Vplay()">
+		<br><br>
+		<img src="media/image/Animals/vulture.png" style="width: 75%" ontouchstart="VVplay()" onclick="VVplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_U" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_W" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="vname" hidden="true" src="media/audio/name/v.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var vplay = document.getElementById("vname");
+		  function Vplay() {vplay.play();}
+	  </script> 
+
+	<audio id="vsound" hidden="true" src="media/audio/sound/vv.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var vvplay = document.getElementById("vsound");
+		  function VVplay() {vvplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter W -->
+<div data-role="page" id="letter_W" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/ww.png" style="width: 75%" ontouchstart="Wplay()" onclick="Wplay()">
+		<br><br>
+		<img src="media/image/Animals/wolf.png" style="width: 80%" ontouchstart="WWplay()" onclick="WWplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_V" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_X" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+		<audio id="wname" hidden="true" src="media/audio/name/w.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var wplay = document.getElementById("wname");
+		  function Wplay() {wplay.play();}
+	  </script> 
+
+	<audio id="wsound" hidden="true" src="media/audio/sound/ww.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var wwplay = document.getElementById("wsound");
+		  function WWplay() {wwplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+<!--   Start of letter X -->
+<div data-role="page" id="letter_X" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/xx.png" style="width: 95%" ontouchstart="Xplay()" onclick="Xplay()">
+		<br><br>
+		<img src="media/image/Animals/xerus.png" style="width: 80%" ontouchstart="XXplay()" onclick="XXplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_W" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_Y" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+
+		<audio id="xname" hidden="true" src="media/audio/name/x.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var xplay = document.getElementById("xname");
+		  function Xplay() {xplay.play();}
+	  </script> 
+
+	<audio id="xsound" hidden="true" src="media/audio/sound/xx.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var xxplay = document.getElementById("xsound");
+		  function XXplay() {xxplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+<!--   Start of letter Y -->
+<div data-role="page" id="letter_Y" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/yy.png" style="width: 70%"  ontouchstart="Yplay()" onclick="Yplay()">
+		<br><br>
+		<img src="media/image/Animals/yak.png" style="width: 82%"  ontouchstart="YYplay()" onclick="YYplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_X" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#letter_Z" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> next</button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+
+
+		<audio id="yname" hidden="true" src="media/audio/name/y.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var yplay = document.getElementById("yname");
+		  function Yplay() {yplay.play();}
+	  </script> 
+
+	<audio id="ysound" hidden="true" src="media/audio/sound/yy.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var yyplay = document.getElementById("ysound");
+		  function YYplay() {yyplay.play();}
+	  </script> 
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--   Start of letter Z -->
+<div data-role="page" id="letter_Z" class="bgc">
+
+
+
+	<div role="main" class="ui-content">
+
+		<center><br>
+		<img src="media/image/name/zz.png" style="width: 90%" ontouchstart="Zplay()" onclick="Zplay()">
+		<br><br>
+		<img src="media/image/Animals/zebra.png" style="width: 90%" ontouchstart="ZZplay()" onclick="ZZplay()">
+		</center>
+
+	</div>
+
+
+	<div style="background: rgba(0,0,0,0);margin: 5px" class="feeter">
+		<a href="#letter_Y" data-transition="flow" data-direction="reverse"><button onclick="pootplay()" class="back-btn" style="float:left; width: 50px"> back</button></a>
+		<a href="#main_menu" data-transition="flip"><button onclick="pootplay()" class="next-btn" style="float:right; margin-right: 10px; width: 50px"> ⌂ </button></a>
+		<center><button class="btn" data-toggle="modal" data-target="#help" style=" border-radius: 50%"> . . . </button></center>
+	</div>
+
+		<audio id="zname" hidden="true" src="media/audio/name/z.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var zplay = document.getElementById("zname");
+		  function Zplay() {zplay.play();}
+	  </script> 
+
+	<audio id="zsound" hidden="true" src="media/audio/sound/zz.mp3" type="audio/mp3"> </audio>
+	  <script>
+		  var zzplay = document.getElementById("zsound");
+		  function ZZplay() {zzplay.play();}
+	  </script> 
+</div>
+</div>
+
+
+
+
+
+
+<!-- LETTERS ---------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- side wing ------------------------------------------------ -->
+  <div onload="pootplay()" class="modal fade" id="help" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+
+
+
+		  <div class="modal-content col-2" style="float: left; background: rgba(0,200,75,.8);" disabled>
+
+
+				  <div class="modal-body" > 
+					
+					<div class="row"> 
+						<div>	
+									<a href="#main_menu" class="texts" onclick="pootplay()" style="font-size: 150%" data-transition="pop"> <center> ⌂ </center> </a>
+									<a href="#letter_A" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>A</center> </a>
+									<a href="#letter_B" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>B</center> </a>
+									<a href="#letter_C" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>C</center> </a>
+									<a href="#letter_D" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>D</center> </a>
+									<a href="#letter_E" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>E</center> </a>
+									<a href="#letter_F" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>F</center> </a>
+									<a href="#letter_G" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>G</center> </a>
+									<a href="#letter_H" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>H</center> </a>
+									<a href="#letter_I" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>I</center> </a>
+									<a href="#letter_J" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>J</center> </a>
+									<a href="#letter_K" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>K</center> </a>
+									<a href="#letter_L" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>L</center> </a>
+									<a href="#letter_M" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>M</center> </a>
+									<a href="#letter_N" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>N</center> </a>
+									<a href="#letter_O" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>O</center> </a>
+									<a href="#letter_P" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>P</center> </a>
+									<a href="#letter_Q" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>Q</center> </a>
+									<a href="#letter_R" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>R</center> </a>
+									<a href="#letter_S" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>S</center> </a>
+									<a href="#letter_T" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>T</center> </a>
+									<a href="#letter_U" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>U</center> </a>
+									<a href="#letter_V" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>V</center> </a>
+									<a href="#letter_W" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>W</center> </a>
+									<a href="#letter_X" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>X</center> </a>
+									<a href="#letter_Y" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>Y</center> </a>
+									<a href="#letter_Z" class="texts" onclick="pootplay()" style="font-size: 200%" data-transition="pop"> <center>Z</center> </a>
+									<a href="#main_menu" class="texts" onclick="pootplay()" style="font-size: 150%" data-transition="pop"> <center> ⌂ </center> </a>
+						</div>
+					</div>
+
+				  </div>
+			</div>
+	
+
+		</div>
+		
+	</div>
+
+
+
+
+
+<!-- <!--   Start of goback  
+<div data-role="page" id="backkk">
+
+
+				  <div class="align-middle"> 
+					
+					<center>
+						<h5 class="texts" style="color: black">Are you sure you want to go back to main menu?</h5>
+						<br>
+						<button type="button" class="btn-lg texts" data-dismiss="modal" aria-label="Close" style="background-color: green;-webkit-border-radius: 40px 0;
+						border-radius: 40px 0;"> Continue </button>
+
+						<button class="btn-lg texts" onclick="refresh" style="background-color: red;-webkit-border-radius: 40px 0;
+						border-radius: 40px 0;"> Yes Please </button>
+						</center>
+
+				  </div>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>crzn.io</title>
+
+	<link rel="stylesheet" href="../../vendor/jquery.mobile-1.4.5.min.css" />
+	<script src="../../vendor/jquery-1.11.1.min.js"></script>
+	<script src="../../vendor/jquery.mobile-1.4.5.min.js"></script>
+	<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+            .myButt{color: white !important; width: 50%;}
+
+            #quotes,.qutie{font-family: Georgia, serif;
+					font-size: 28px;
+					letter-spacing: -0.8px;
+					word-spacing: 0.2px;
+					color: #303030;
+					font-weight: normal;
+					text-decoration: none;
+					font-style: normal;
+					font-variant: normal;
+					text-transform: none;}
+
+			.shadowbox{
+				-webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0); 
+				box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+				}
+
+    		</style>
+
+	<script>
+	function qute(){
+			var myArray = [
+				
+     "Automatic simply means that you cannot repair it yourself.",
+     "90% of everything is crud.",
+     "A Project Manager is like the madam in a brothel. His job is to see that everything comes off right.",
+     "A Smith & Wesson always beats four aces.",
+     "A bird in hand is safer than one overhead.",
+     "A bird in the hand is worth about three Kleenex.",
+     "A child's ability to endure likely stems from his ignorance of alternatives.",
+     "A clean desk is a sign of a sick mind.",
+     "A closed mouth says nothing wrong; a closed mind does nothing right.",
+     "A computer makes as many mistakes in one second as three men working for thirty years straight.",
+     "A conference is simply an admission that you want somebody else to join you in your troubles.",
+     "A dog is a dog except when he is facing you. Then he is Mr. Dog.",
+     "A fellow who is always declaring that he is no fool usually harbors suspicions to the contrary.",
+     "A fool and his money are some party.",
+     "A friend in power is a friend lost.",
+     "A good listener not only is popular everywhere but also, after a while, knows something.",
+     "A great deal of money is never enough once you have it.",
+     "A hunch is creativity trying to tell you something.",
+     "A liberalism incapable of fiscal self-discipline brings about a radical conservatism conspicuous for its selfishness and insensitivity.",
+     "A major failure will not occur until after the unit has passed final inspection.",
+     "A man does not look behind the door unless he has stood there himself.",
+     "A man will believe anything that does not cost him anything.",
+     "A meeting is an event at which the minutes are kept and the hours are lost.",
+     "A miser is a fellow who lives within his income. He is also called a magician.",
+     "A misplaced decimal point will always end up where it will do the greatest damage.",
+     "A narrow mind has a broad tongue.",
+     "A neurotic builds castles in the air.",
+     "psychotic lives in castles in the air.",
+     "And a psychiatrist is the guy who collects the rent.",
+     "A perfectly calm day will turn gusty the instant you drop a $20 bill.",
+     "A pipe gives a wise man time to think and a fool something to stick in his mouth.",
+     "A politician's most important ability is to foretell what will happen tomorrow and next month and next year - and to explain afterwards why it didn't happen.",
+     "A seeming ignorance is often a most necessary part of worldly knowledge.",
+     "A sense of decency is often a decent man's undoing.",
+     "A short cut is the longest distance between two points.",
+     "A stockbroker is someone who invests your money until it is all gone.",
+     "A synonym is a word you use when you can't spell the other one.",
+     "A waist is a terrible thing to mind.",
+     "A yacht is a hole in the water, lined with wood, steel, or fiberglass, through which one pours all his money.",
+     "Academic rivalries are so intense because the stakes are so small.",
+     "Activity is the politician's substitute for achievement.",
+     "Adam Smith revisited: Work creates Wealth, which is then Redistributed in the holy name of Social Justice. That is to say, what is mine is yours, and his, and hers, and theirs...",
+     "Adventure is no more than discomfort and annoyance recollected in the safety of reminiscence.",
+     "After all is said and done, a hell of a lot more is said than done.",
+     "Against stupidity, the gods themselves contend in vain.",
+     "All great discoveries are made by mistake.",
+     "All skill is in vain when an angel pees in the barrel of your rifle.",
+     "All things are possible.",
+     "Except skiing through a revolving door.",
+     "All things being equal, a fat person uses more soap than a thin person.",
+     "All turtle thoughts are of turtle.",
+     "All warranties expire upon payment of invoice.",
+     "All work and no play make Jack a dull boy and Jill a wealthy widow.",
+     "All's well that ends.",
+     "Almost everything in life is easier to get into than out of.",     
+     "Although I may disagree with what you say, I will defend to the death your right to hear me tell you how wrong you are.",
+     "Always address your elders with respect; they could leave you a fortune.",
+     "Always convice those whom you are about to deceive that you are acting in their best interests.",
+     "Always forgive your enemies - nothing else annoys them as much.",
+     "Always mistrust a subordinate who never finds fault with his boss.",
+     "Ambition is the curse of the political class.",
+     "Among economists, the real world is generally considered to be a special case.",
+     "An easily understood, workable falsehood is more useful than a complex, incomprehensible truth.",
+     "An economy cannot afford high tech unless it has a basic structure of other industry to provide the savings that will support high tech until it begins to pay off.",
+     "An efficient bureaucracy is the greatest threat to liberty.",
+     "An elephant is a mouse built to government specifications.",
+     "An expert is one who knows more and more about less and less until he knows absolutely everything about nothing.",
+     "An infinite number of mediocrities do not add up to one genius.",
+     "An open mouth oft-times accompanies a closed mind.",
+     "An unhappy crew makes for a dangerous voyage.",
+     "Anger is never without an argument, or with a good one.",
+     "Any appetite is its own excuse for existing.",
+     "Any component, when inadvertently dropped, will roll into a hiding place, the inaccessibility of which is proportional to the square of the component's irreplaceability.",
+     "Any contract drawn in more than 50 words contains at least one loophole.",
+     "Any given computer program, when running, is obsolete.",
+     "Any machine design must contain at least one part which is obsolete, two parts which are unobtainable, and three parts which are still under development.",
+     "Any simple theory will be worded in the most complicated terms.",
+     "Any sufficiently advanced technology is indistinguishable from magic.",
+     "Anyone can handle a crisis.It's everyday living that kills you.",
+     "Anyone in good enough condition to run three miles a day is in good enough condition not to have to.",
+     "Art is a passion pursued with discipline; science is a discipline pursued with passion.",
+     "As scarce as truth is, the supply invariably exceeds the demand.",
+     "As the rabbit said, if that ain't a wolf, it's a hell of a big dog.",
+     "Ask your children what they want for dinner only if they are buying.",
+     "Assumptions, so often full of holes, remain precious to the convinced.",
+     "At best, life is a spiral and never a pendulum. What has been done cannot be undone.",
+     "Bad weather forecasts are more often right than good ones.",
+     "Bankers are the assassins of hope.",
+     "Basic research is what you do when you don't know what you are doing.",
+     "Be a corporate good citizen; hire the morally handicapped.",
+     "Be kind to your web-footed friends; that duck may be a buyer.",
+     "There's no intelligent life down here.",
+     "Beauty is only skin deep, but ugly goes right to the bone.",
+     "Behind every successful man is an astonished mother-in-law.",
+     "Being king is not much fun if no one knows you are one.",
+     "Bend the facts to fit the conclusion. It's easier that way.",
+     "Beware of all enterprises requiring new clothes.",
+     "Black holes are outa sight!",
+     "Blessed are the censors, for they shall inhibit the earth.",
+     "Blessed are the meek for they shall inherit the crap.",
+     "Blessed are the young, for they shall inherit the national debt.",
+     "Blessed be he who is called a big wheel, for he goeth around in circles.",
+     "Bosses come and bosses go, but a good secretary lasts forever.",
+     "Bullshit baffles brains.",
+     "By the time most of us have money to burn, our fire's gone out.",
+     "By working faithfully 8 hours a day, you may eventually get to be a boss and work 12 hours a day.",
+     "Celibacy is not hereditary.",
+     "Cheer up.The first hundred years are the hardest!",
+     "Children are a comfort in your old age, and they will even help you reach it.",
+     "Civil servants are neither civil nor servile.",
+     "Common sense is instinct. Enough of it is genius.",
+     "Computers are unreliable, but humans are even more unreliable. Any system which depends upon human reliability is unreliable. You can rely on it.",
+     "Confidence is the feeling you had before you knew better.",
+     "Construct a system that even a fool can use and only a fool will want to use it.",
+     "Crime is merely politics without the excuses.",
+     "Crisis management works beautifully until an actual crisis occurs.",
+     "Da trouble wit computers is, dey got no sense of humor.",
+     "Days you attend top-level meetings and days you get hiccups tend to fall on the same dates.",
+     "Degeneration and evolution are not the same thing.",
+     "Desperate diseases require desperate remedies.",
+     "Did you know that if you maintain a cholesterol-free diet, your body makes its own cholesterol.",
+     "Diogenes is still searching.",
+     "Distrust your first impressions; they are invariably too favorable.",
+     "Don't be afraid to take a big step. You cannot cross a chasm in two small steps.",
+     "Don't be so humble...you aren't that great.",
+     "Don't get married if you are afraid of solitude.",
+     "Don't hit a man when he's down unless you are damned certain he won't get up.",
+     "Don't wear earmuffs in a bed of rattlesnakes.",
+     "Don't worry about what other people are thinking of you. They're too busy worrying about what you are thinking of them.",
+     "Dr. Faustus, call your service.",
+     "During Britain's brain drain, not a single politician left the country.",
+     "Economics is the only calling in which one can have a lifetime reputation as an expert without ever once being right.",
+     "Education confers understanding, knowledge, and competence; schools confer degrees.",
+     "Enthusiasm wanes, but dullness lasts forever.",
+     "Eternity is a terrible thought...where will it all end",
+     "Even Mason and Dixon had to draw the line somewhere.",
+     "Even the most faithful believer can serve a false god.",
+     "Every calling is great when greatly pursued.",
+     "Every family tree has some sap.",
+     "Every institution tends to perish through an excess of its own policy.",
+     "Every society professes the existence of inalienable human rights;most, however, are somewhat vague as to just what they are.",
+     "Everybody's death simplifies life for someone.",
+     "Everyone has a scheme for getting rich that will not work.",
+     "Everything comes to he who waits - providing he has either infinite patience or infinite wealth.",
+     "Everything east of the San Andreas Fault will eventually plunge into the Atlantic Ocean.",
+     "Everything not forbidden by the laws of Nature is mandatory. Trouble is, nearly everything is forbidden.",
+     "Example is not the main thing in influencing others; it is the only thing.",
+     "Excellence is an option that is renewable.",
+     "Expectations should not determine whether or not one acts, nor how.",
+     "Expensive fertilizers that do nothing for your grass will give you the most gorgeous weeds you ever saw.",
+     "Experience is a good teacher, but submits huge bills.",
+     "Experience is what you get when you don't get what you wanted.",
+     "Experimentation is the mother of confusion.",
+     "Extinction is the ultimate fate of all species.",
+     "Extreme boredom serves to cure boredom.",
+     "Extreme sorrow laughs; extreme joy weeps.",
+     "Extremely happy and extremely unhappy men are alike prone to grow hard-hearted.",
+     "Facts cannot prevail against faith, or adamant folly."
+	];
+
+			var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
+			var heyo = document.getElementById("quotes");
+
+			heyo.innerHTML = randomItem;
+		}
+	</script>
+
+</head>
+
+<body onload="qute()" onclick="location.reload();">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="A" style="background-image: url(bg.jpg); background-size: 100% auto;">
+
+    <div style="margin: 5%; -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px 50px 15px 50px rgba(0,0,0,0); 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px 50px 15px 50px rgba(0,0,0,0);
+background: #ECEFCF; border-radius: 10px">
+        <center>
+            <h2>Words of Wisdom</h2>
+          <!--   <p>Tap to Reload</p> -->
+        </center>
+    </div>
+
+            
+            <!-- <div class="shadowbox" style="border: 5px solid orange; border-radius: 5px; pointer-events: none !important; margin: 15px; position: fixed;bottom: 9px; background-color: white"> -->
+            <div style="pointer-events: none !important;position: fixed;bottom: 9px; background-image: url(bg.png); background-size: 100%; margin-left: 35px">
+                <p class="qutie" style="transform: rotate(-3deg); text-align: center;margin: 50px 70px 50px 50px">“ <span id="quotes"></span> ”</p>
+            </div>
+
+       
+    
+
+<!--     <div style="position: fixed;bottom: 0; width: 100%;">
+	   <center>
+            <a href="#B" data-transition="flow" class="myButt btn-warning btn btn-lg"> <h3> NEXT </h3> </a>
+            <br>
+            ✦✧✧✧✧
+        </center>
+    </div>
+    <br><br><br><br> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

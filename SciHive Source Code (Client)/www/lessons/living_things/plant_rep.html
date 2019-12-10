@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>Plant Reproduction</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: white">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">Plant Reproduction</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> Plant Reproduction</h3>	
+		
+		</div>
+
+
+	<script type="text/javascript" src="../../vendor/model-viewer.js"></script>
+
+    <center>
+        <model-viewer style="width: 100%; height: 450px" src="PLANTS/scene.gltf" auto-rotate camera-controls background-color="black">
+        </model-viewer>
+        <span style="font-size: .7em">3D Model (Touch and Rotate)</span>
+    </center>
+
+
+
+
+<br>
+
+	<div id="carousel1" data-interval="2000" class="carousel slide" data-ride="carousel" style="border: 3px ridge orange">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block w-100" src="PLANTS/L1.jpg" alt="First slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="PLANTS/L2.jpg" alt="Second slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="PLANTS/L3.jpg" alt="Third slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="PLANTS/L4.jpg" alt="Fourth slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="PLANTS/L5.jpg" alt="Fifth slide">
+	    </div>
+	  </div>
+	</div><br>
+
+
+
+<img src="PLANTS/plantrep1.png" width="100%">
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "Plant Reproduction. Breathing air is necessary for keeping humans alive. Your lungs make up one of the largest organs in your body, and they work with your Plant Reproduction to allow you to take in fresh air, get rid of stale air, and even talk. Let's take a tour of the lungs! Your lungs are in your chest, and they are so large that they take up most of the space in there. You have two lungs, but they arent the same size the way your eyes or nostrils are. Instead, the lung on the left side of your body is a bit smaller than the lung on the right. This extra space on the left leaves room for your heart. Your lungs are protected by your rib cage, which is made up of 12 sets of ribs. These ribs are connected to your spine in your back and go around your lungs to keep them safe. Beneath the lungs is the diaphragm, a dome-shaped muscle that works with your lungs to allow you to inhale and exhale air.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+	function read2(){
+
+		var line_2 = "Look Inside the Lungs. From the outside, lungs are pink and a bit squishy, like a sponge. But the inside contains the real lowdown on the lungs! At the bottom of the trachea, or windpipe, there are two large tubes. These tubes are called the main stem bronchi, and one heads left into the left lung, while the other heads right into the right lung. Each main stem bronchus - the name for just one of the bronchi - then branches off into tubes, or bronchi, that get smaller and even smaller still, like branches on a big tree. The tiniest tubes are called bronchioles, and there are about 30,000 of them in each lung. Each bronchiole is about the same thickness as a hair. At the end of each bronchiole is a special area that leads into clumps of teeny tiny air sacs called alveoli. There are about 600 million alveoli in your lungs and if you stretched them out, they would cover an entire tennis court. Now that's a load of alveoli! Each alveolus - what we call just one of the alveoli - has a mesh-like covering of very small blood vessels called capillaries. These capillaries are so tiny that the cells in your blood need to line up single file just to march through them.";
+
+	    TTS.speak({
+	        text: line_2,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock2='<button onclick="stop2()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts2").innerHTML = codeBlock2;
+
+	}
+
+
+
+	function read3(){
+
+		var line_3 = "All About Inhaling. When you're walking your dog, cleaning your room, or spiking a volleyball, you probably don't think about inhaling - you've got other things on your mind! But every time you inhale air, dozens of body parts work together to help get that air in there without you ever thinking about it. As you breathe in, your diaphragm contracts and flattens out. This allows it to move down, so your lungs have more room to grow larger as they fill up with air. Move over, diaphragm, I'm filling up! is what your lungs would say. And the diaphragm isn't the only part that gives your lungs the room they need. Your rib muscles also lift the ribs up and outward to give the lungs more space. At the same time, you inhale air through your mouth and nose, and the air heads down your trachea, or windpipe. On the way down the windpipe, tiny hairs called cilia move gently to keep mucus and dirt out of the lungs. The air then goes through the series of branches in your lungs, through the bronchi and the bronchioles. The air finally ends up in the 600 million alveoli. As these millions of alveoli fill up with air, the lungs get bigger. It's the alveoli that allow oxygen from the air to pass into your blood. All the cells in the body need oxygen every minute of the day. Oxygen passes through the walls of each alveolus into the tiny capillaries that surround it. The oxygen enters the blood in the tiny capillaries, hitching a ride on red blood cells and traveling through layers of blood vessels to the heart. The heart then sends the oxygenated blood out to all the cells in the body.";
+
+	    TTS.speak({
+	        text: line_3,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock3='<button onclick="stop3()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts3").innerHTML = codeBlock3;
+
+	}
+
+
+
+
+	function read4(){
+
+		var line_4 = "Waiting to Exhale. When it's time to exhale, everything happens in reverse: Now it's the diaphragm's turn to say, Move it! Your diaphragm relaxes and moves up, pushing air out of the lungs. Your rib muscles become relaxed, and your ribs move in again, creating a smaller space in your chest. By now your cells have used the oxygen they need, and your blood is carrying carbon dioxide and other wastes that must leave your body. The blood comes back through the capillaries and the wastes enter the alveoli. Then you breathe them out in the reverse order of how they came in — the air goes through the bronchioles, out the bronchi, out the trachea, and finally out through your mouth and nose. The air that you breathe out not only contains wastes and carbon dioxide, but it's warm, too! As air travels through your body, it picks up heat along the way. You can feel this heat by putting your hand in front of your mouth or nose as you breathe out. What is the temperature of the air that comes out of your mouth or nose? With all this movement, you might be wondering why things don't get stuck as the lungs fill and empty! Luckily, your lungs are covered by two really slick special layers called pleural membranes. These membranes are separated by a fluid that allows them to slide around easily while you inhale and exhale.";
+
+	    TTS.speak({
+	        text: line_4,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock4='<button onclick="stop4()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts4").innerHTML = codeBlock4;
+
+	}
+
+
+
+
+
+	function read5(){
+
+		var line_5 = "Time for Talk. Your lungs are important for breathing and also for talking! Above the trachea is the larynx, which is sometimes called the voice box. Across the voice box are two tiny ridges called vocal cords, which open and close to make sounds. When you exhale air from the lungs, it comes through the trachea and larynx and reaches the vocal cords. If the vocal cords are closed and the air flows between them, the vocal cords vibrate and a sound is made. The amount of air you blow out from your lungs determines how loud a sound will be and how long you can make the sound. Try inhaling very deeply and saying the names of all the kids in your class - how far can you get without taking the next breath? The next time you're outside, try shouting and see what happens - shouting requires lots of air, so you'll need to breathe in more frequently than you would if you were only saying the words.";
+
+	    TTS.speak({
+	        text: line_5,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock5='<button onclick="stop5()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts5").innerHTML = codeBlock5;
+
+	}
+
+
+
+
+
+	function read6(){
+
+		var line_6 = "Love your Lungs. Your lungs are amazing. They allow you to breathe, talk to your friend, shout at a game, sing, laugh, cry, and more! And speaking of a game, your lungs even work with your brain to help you inhale and exhale a larger amount of air at a more rapid rate when you're running a mile - all without you even thinking about it once. Keeping your lungs looking and feeling healthy is a smart idea, and the best way to keep your lungs pink and healthy is not to smoke. Smoking isn't good for any part of your body, and your lungs especially hate it. Cigarette smoke damages the cilia in the trachea so they can no longer move to keep dirt and other substances out of the lungs. Your alveoli get hurt too, because the chemicals in cigarette smoke can cause the walls of the delicate alveoli to break down, making it much harder to breathe. Finally, cigarette smoke can damage the cells of the lungs so much that the healthy cells go away, only to be replaced by cancer cells. Lungs are normally tough and strong, but when it comes to cigarettes, they can be hurt easily — and it's often very difficult or impossible to make them better. If you need to work with chemicals in an art or shop class, be sure to wear a protective mask to keep chemical fumes from entering your lungs. You can also show your love for your lungs by exercising! Exercise is good for every part of your body, and especially for your lungs and heart. When you take part in vigorous exercise, your lungs require more air to give your cells the extra oxygen they need. As you breathe more deeply and take in more air, your lungs become stronger and better at supplying your body with the air it needs to succeed. Keep your lungs healthy and they will thank you for life!";
+
+	    TTS.speak({
+	        text: line_6,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock6='<button onclick="stop6()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts6").innerHTML = codeBlock6;
+
+	}
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+	function stop2(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock2='<button onclick="read2()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts2").innerHTML = codeBlock2;
+	}
+
+
+
+	function stop3(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock3='<button onclick="read3()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts3").innerHTML = codeBlock3;
+	}
+
+
+	function stop4(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock4='<button onclick="read4()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts4").innerHTML = codeBlock4;
+	}
+
+
+	function stop5(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock5='<button onclick="read5()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts5").innerHTML = codeBlock5;
+	}
+
+
+	function stop6(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock6='<button onclick="read6()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts6").innerHTML = codeBlock6;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

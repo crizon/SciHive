@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>What is Science</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">What is Science?</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br><br><br>
+
+
+<center>
+	<div style="background-color: black;background-image: url(../vid.png); background-position: center; background-repeat: no-repeat;">
+		<iframe width="95%" height="auto" src="https://www.youtube.com/embed/de8OzOmUD7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</center>
+<br>
+
+
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3>Science</h3>
+						
+		
+		</div>
+		
+
+	<p>
+	The world is composed of different things like plants, animals, people, infastructures, and human inventions. People ask questions about the things in the environment,
+	what causes an event to happen, and how they could make their life easier.
+
+	<br>
+	<div id="carousel1" data-interval="3000" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block w-100" src="science/L1.png" alt="First slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L2.png" alt="Second slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L3.png" alt="Third slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L4.png" alt="Fourth slide">
+	    </div>
+	  </div>
+	</div>
+	<br>
+
+	Science came about to improve the life of people and to provide solutions to some
+	of their problems. Scientiﬁc knowledge led humans to technologies that have made life
+	easier. Some of the developed technologies are the telescope, microscope, appliances,
+	machines, computers, and cell phones.
+
+	<br><br>
+	<div id="carousel2" data-interval="2000" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block w-100" src="science/L5.png" alt="First slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L6.png" alt="Second slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L7.png" alt="Third slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L8.png" alt="Fourth slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="science/L9.png" alt="Fifth slide">
+	    </div>
+	  </div>
+	</div>
+	<br>
+
+	The moment you learn to ask questions, you become curious about yourself, your body and the things around you; you begin to gather information and more knowledge as you search for truth. <b> Science </b> is a search for knowledge and truth. Therefore, it can be deﬁned as a systematized body of knowledge based on facts and pieces of evidence through experimentation and observation. The application of scientific knowledge for practical purposes, especially in industry is called <b> technology </b>.
+	</p>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "The world is composed of different things like plants, animals, people, infastructures, and human inventions. People ask questions about the things in the environment, what causes an event to happen, and how they could make their life easier. Science came about to improve the life of people and to provide solutions to some of their problems. Scientific knowledge led humans to technologies that have made life easier. Some of the developed technologies are the telescope, microscope, appliances, machines, computers, and cell phones. The moment you learn to ask questions, you become curious about yourself, your body and the things around you; you begin to gather information and more knowledge as you search for truth. Science is a search for knowledge and truth. Therefore, it can be deﬁned as a systematized body of knowledge based on facts and pieces of evidence through experimentation and observation. The application of scientific knowledge for practical purposes, especially in industry is called technology.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

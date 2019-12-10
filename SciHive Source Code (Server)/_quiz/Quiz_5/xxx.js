@@ -1,0 +1,1 @@
+var pota = "potang ina"

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>The Sun</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">The Sun</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+	
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> The Sun</h3>	
+		
+		</div>
+
+
+	<script type="text/javascript" src="../../vendor/model-viewer.js"></script>
+    <center>
+        <model-viewer style="width: 100%; height: 300px" src="Earth/sun.glb" auto-rotate camera-controls background-image="Earth/bg2.jpg">
+        </model-viewer>
+        3D Model (Touch and Rotate)
+    </center>
+    <br>
+    <br>
+
+	
+
+	<p>
+        <li>The Sun is a star found at the center of the Solar System.</li><br>
+
+        <li>It makes up around 99.86% of the Solar System's mass.</li><br>
+
+        <li>At around 1,392,000 kilometres (865,000 miles) wide, the Sun's diameter is about 110 times wider than Earth's.</li><br>
+
+        <li>Around 74% of the Sun's mass is made up of hydrogen. Helium makes up around 24% while heavier elements such as oxygen, carbon, iron and neon make up the remaining percentage.</li><br>
+
+        <li>Light from the Sun reaches Earth in around 8 minutes.</li><br>
+
+        <li>The Sun's surface temperature is around 5500 degrees Celsius (9941 degrees Fahrenheit), so pack plenty of sunscreen if you plan on visiting (remembering that the average distance from the Sun to the Earth is around 150 million kilometers).</li><br>
+
+        <li>The Sun's core is around 13600000 degrees Celsius!</li><br>
+
+        <li>The Sun generates huge amounts of energy by combining hydrogen nuclei into helium. This process is called nuclear fusion.</li><br>
+
+        <li>Because of the Sun's huge influence on Earth, many early cultures saw the Sun as a deity or god. For example, Ancient Egyptians had a sun god called Ra while in Aztec mythology there is a sun god named Tonatiuh.</li><br>
+
+        <li>The Sun produces a solar wind which contains charged particles such as electrons and protons. They escape the Sun's intense gravity because of their high kinetic energy and the high temperature of the Sun's corona (a type of plasma atmosphere that extends into space).</li><br>
+
+        <li>Planets with strong magnetic fields such as Earth manage to deflect most of these charged particles as they approach.</li><br>
+
+        <li>A solar eclipse occurs when the Moon is between the Sun and the Earth.</li><br><br>
+
+        <img src="Earth/sun1.jpeg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/sun2.jpeg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/sun3.jpeg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br>
+
+
+
+
+    </p>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "The Sun. The Sun is a star found at the center of the Solar System. It makes up around 99.86% of the Solar System's mass. At around 1,392,000 kilometres (865,000 miles) wide, the Sun's diameter is about 110 times wider than Earth's. Around 74% of the Sun's mass is made up of hydrogen. Helium makes up around 24% while heavier elements such as oxygen, carbon, iron and neon make up the remaining percentage. Light from the Sun reaches Earth in around 8 minutes. The Sun's surface temperature is around 5500 degrees Celsius (9941 degrees Fahrenheit), so pack plenty of sunscreen if you plan on visiting (remembering that the average distance from the Sun to the Earth is around 150 million kilometers). The Sun's core is around 13600000 degrees Celsius! The Sun generates huge amounts of energy by combining hydrogen nuclei into helium. This process is called nuclear fusion. Because of the Sun's huge influence on Earth, many early cultures saw the Sun as a deity or god. For example, Ancient Egyptians had a sun god called Ra while in Aztec mythology there is a sun god named Tonatiuh. The Sun produces a solar wind which contains charged particles such as electrons and protons. They escape the Sun's intense gravity because of their high kinetic energy and the high temperature of the Sun's corona (a type of plasma atmosphere that extends into space). Planets with strong magnetic fields such as Earth manage to deflect most of these charged particles as they approach. A solar eclipse occurs when the Moon is between the Sun and the Earth.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

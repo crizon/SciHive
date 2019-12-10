@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>Earth</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">Earth</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+	
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> Earth</h3>	
+		
+		</div>
+
+
+	<script type="text/javascript" src="../../vendor/model-viewer.js"></script>
+    <center>
+        <model-viewer style="width: 100%; height: 300px" src="Earth/Earth.glb" auto-rotate camera-controls autoplay background-color="black" background-image="Earth/bg2.jpg">
+        </model-viewer>
+        3D Model (Touch and Rotate)
+    </center>
+    <br>
+    <br>
+
+	
+
+	<p>
+        Our atmosphere is made mostly of nitrogen and has plenty of oxygen for us to breathe. The atmosphere also protects us from incoming meteoroids, most of which break up in our atmosphere before they can strike the surface as meteorites.<br><br>
+
+
+        Since we live here, you might think we know all there is to know about Earth. Not at all, actually! We have a lot we can learn about our home planet. Right now, there are many satellites orbiting Earth taking pictures and measurements. This is how we can learn more about weather, oceans, soil, climate change, and many other important topics.<br><br>
+
+
+        <img src="Earth/earth1.jpg" width="100%"><br>
+
+
+        <h3>Structure and Surface</h3>
+
+        <li>Earth is a terrestrial planet. It is small and rocky.</li>
+        <li>Earth's atmosphere is the right thickness to keep the planet warm so living things like us can be there. It's the only planet in our solar system we know of that supports life. It is mostly nitrogen, and it has plenty of oxygen for us to breathe</li>
+        <br>
+
+        <img src="Earth/earth2.jpg" width="100%" style="border: 5px outset orange"><br><br>
+
+        <h3>Time on Earth</h3>
+
+        <li>A day on Earth lasts a little under 24 hours.</li>
+        <li>One year on Earth lasts 365.25 days. That 0.25 extra means every four years we need to add one day to our calendar. We call it a leap day (in a leap year).</li>
+        <br>
+
+        <h3>Earth's Neighbors</h3>
+        <li>Earth has just one moon. It is the only planet to have just one moon.</li>
+        <li>Earth has lots of spacecraft watching it. There is still a lot we can learn about our home planet.</li>
+        <li>Earth is the third planet from the Sun in our solar system. That means Venus and Mars are Earth's neighboring planets.</li>
+        <br>
+
+
+        <h3>What does Earth look like?</h3><br><br>
+
+
+        <img src="Earth/earth3.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <i>This Apollo 11 picture taken by an astronaut in 1969 shows the Earth rising over the moon. Doesn't it look small?</i>
+        <br><br>
+
+        <img src="Earth/earth4.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <i>This is a view of Earth looking just at the northern portion.</i>
+        <br><br>
+
+        <img src="Earth/earth5.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <i>A NASA camera on the Deep Space Climate Observatory satellite took this picture of the entire sunlit side of Earth from one million miles away.</i>
+        <br><br>
+
+
+
+
+
+    </p><br>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "Our home planet Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70% of Earth's surface. Our atmosphere is made mostly of nitrogen and has plenty of oxygen for us to breathe. The atmosphere also protects us from incoming meteoroids, most of which break up in our atmosphere before they can strike the surface as meteorites. Since we live here, you might think we know all there is to know about Earth. Not at all, actually! We have a lot we can learn about our home planet. Right now, there are many satellites orbiting Earth taking pictures and measurements. This is how we can learn more about weather, oceans, soil, climate change, and many other important topics. Structure and Surface. Earth is a terrestrial planet. It is small and rocky. Earth's atmosphere is the right thickness to keep the planet warm so living things like us can be there. It’s the only planet in our solar system we know of that supports life. It is mostly nitrogen, and it has plenty of oxygen for us to breathe. Time on Earth. One year on Earth lasts 365.25 days. That 0.25 extra means every four years we need to add one day to our calendar. We call it a leap day (in a leap year). Earth’s Neighbors. Earth has just one moon. It is the only planet to have just one moon. Earth has lots of spacecraft watching it. There is still a lot we can learn about our home planet. Earth is the third planet from the Sun in our solar system. That means Venus and Mars are Earth’s neighboring planets.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>HTML5 Tetris</title>
+        <link rel='stylesheet' href='style.css' />
+    </head>
+    <body style="background-image: url(bg.jpg);">
+        <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+
+        <center>
+            <img src="tet.png">
+            <button id="playbutton" onclick="playButtonClicked();" style="color: white; background-color: orange; border: 2px outset orange; border-radius: 5px; margin-bottom: 5px; position: fixed; top: 100px;font-size: 5em; z-index: 1000; left: 5px; padding: 10px"> ► Play</button>
+        </center>
+        
+        <canvas width='300' height='500' style="background-color: white; border: 2px ridge orange; border-radius: 5px"></canvas>
+
+        <br>
+
+        <div style="width: 100%; border: none">
+            <center>
+                <button style="width: 23%; color: white; background-color: orange; border: 2px outset orange; border-radius: 5px" onclick="galawL()"><h1>◁</h1></button>
+                <button style="width: 23%; color: white; background-color: orange; border: 2px outset orange; border-radius: 5px" onclick="galawR()"><h1>▷</h1></button>
+                <button style="width: 23%; color: white; background-color: orange; border: 2px outset orange; border-radius: 5px" onclick="galawD()"><h1>▽</h1></button>
+                <button style="width: 23%; color: white; background-color: orange; border: 2px outset orange; border-radius: 5px" onclick="galawikot()"><h1>↻</h1></button>
+            </center>
+        </div>
+        
+        <script src='js/tetris.js'></script>
+        <script src='js/controller.js'></script>
+        <script src='js/render.js'></script>
+    </body>
+</html>

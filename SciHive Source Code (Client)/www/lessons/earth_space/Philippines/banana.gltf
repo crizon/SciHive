@@ -1,0 +1,356 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 510,
+      "max": [
+        3.4224543571472168,
+        3.8968930244445801,
+        0.86464405059814453
+      ],
+      "min": [
+        -5.0483865737915039,
+        -0.060265660285949707,
+        -1.1320223808288574
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 6120,
+      "componentType": 5126,
+      "count": 510,
+      "max": [
+        0.99761563539505005,
+        0.99252623319625854,
+        0.98970955610275269
+      ],
+      "min": [
+        -0.99868732690811157,
+        -0.98720782995223999,
+        -0.99859142303466797
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 510,
+      "max": [
+        0.58573716878890991,
+        0.99253416061401367,
+        0.99943959712982178,
+        1
+      ],
+      "min": [
+        -0.64913362264633179,
+        -0.99834698438644409,
+        -0.99534326791763306,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 510,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1572,
+      "max": [
+        509
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 12240,
+      "componentType": 5126,
+      "count": 95,
+      "max": [
+        3.4160676002502441,
+        3.8587179183959961,
+        -0.53364086151123047
+      ],
+      "min": [
+        3.398219108581543,
+        3.8361458778381348,
+        -0.55956172943115234
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 13380,
+      "componentType": 5126,
+      "count": 95,
+      "max": [
+        0.99482578039169312,
+        0.96603882312774658,
+        0.82240259647369385
+      ],
+      "min": [
+        -0.30967944860458374,
+        -0.4849945604801178,
+        -0.99778628349304199
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 8160,
+      "componentType": 5126,
+      "count": 95,
+      "max": [
+        0.55579650402069092,
+        0.90954488515853882,
+        0.99078369140625,
+        1
+      ],
+      "min": [
+        -0.66161972284317017,
+        -0.8290865421295166,
+        -0.99533760547637939,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 4080,
+      "componentType": 5126,
+      "count": 95,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 6288,
+      "componentType": 5125,
+      "count": 144,
+      "max": [
+        94
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "ENOMIC (https://sketchfab.com/ENOMIC)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/banana-non-texture-8d0d2785d79246639532d9a235c2fddc",
+      "title": "Banana - Non Texture"
+    },
+    "generator": "Sketchfab-5.47.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6864,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4840,
+      "byteOffset": 6864,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14520,
+      "byteOffset": 11704,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9680,
+      "byteOffset": 26224,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 35904,
+      "uri": "banana.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "pasted__Banana",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.83733905320000002,
+          0.80735457850000003,
+          0.0085435929000000008,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.1968368902
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "pasted__Stem",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.073677894699999996,
+          0.0099997487999999995,
+          0.0099997487999999995,
+          1
+        ],
+        "metallicFactor": 0.83098323169999999,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "pasted__loftedSurface4_pasted__Banana_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "pasted__loftedSurface4_pasted__Stem_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "10cf15e79518428593c5ed18f43a121d.fbx"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "group"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "name": "pasted__loftedSurface4"
+    },
+    {
+      "mesh": 0,
+      "name": "pasted__loftedSurface4_pasted__Banana_0"
+    },
+    {
+      "mesh": 1,
+      "name": "pasted__loftedSurface4_pasted__Stem_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>Animal Reproduction</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">Animal Reproduction</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+	
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> Animal Reproduction</h3>	
+		
+		</div>
+
+	<br>
+
+	<div id="carousel1" data-interval="2000" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block w-100" src="ANIMALS/anirep1.jpg" alt="First slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="ANIMALS/anirep2.jpg" alt="Second slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="ANIMALS/anirep3.jpg" alt="Third slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="ANIMALS/anirep4.jpg" alt="Fourth slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="ANIMALS/anirep5.jpg" alt="Fifth slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="ANIMALS/anirep6.jpg" alt="Fifth slide">
+	    </div>
+	  </div>
+	</div><br>
+    
+    <img src="ANIMALS/anirep.jpg" width="100%">
+
+    <a href="https://sciencing.com/animal-reproduction-development-6320639.html" target="_blank">
+        <button class="btn btn-block" style="margin-bottom: 5px; background-color: #7714d1; color: white; border: 1px outset; background-image: url(../../img/hexellence.png)"> Reproduction & Development <i class="fas fa-fw fa-globe"></i>
+        </button>
+    </a>
+		
+	<span style="font-size: .6em"> Images by Jasmine Chapgar </span>
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "Animal Reproduction. Another difference is the way animals give birth to their young. Most baby mammals grow inside their mother until they are born. This is something that makes mammals different, because most other kinds of animals do something else. Babies growing in eggs. snake and her eggs. Reptiles usually lay eggs, and the babies then grow turtle eggsinside the egg until they are ready to come out. Sometimes reptiles will give birth like mammals, without eggs. birds lay eggs Birds also lay eggs, with a very hard outer shell. Birds generally lay 1 to 17 eggs at a time. Amphibians lay thousands and sometimes millions of small, soft eggs, and they lay them in the water! The eggs are jelly-like. Amphibian means double life the early part of an amphibians life is spent in the water, and usually as they get older then they also spend time on land. Think of a tadpole turning into a frog. egg to tadpole to frog. The process amphibians go through is called metamorphosis. Baby amphibian looks completely different than the adult amphibians! fish lay many, many eggs. Fish also lay many many eggs sometimes millions of tiny eggs! They are also laid in the water. Mammals and milk. mammals milkAnother important characteristic is that mammal babies drink milk from their mothers until they are old enough to eat other food. humans are mammals too. You may have seen this with mammals and their babies - including humans, who are also mammals!";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>scan log-in</title>
+
+  <script type="text/javascript" src="../cordova.js"></script>
+
+
+<!--   <link rel="stylesheet" href="vendor/jquery.mobile-1.4.5.min.css" /> -->
+  <script src="../vendor/jquery-1.11.1.min.js"></script>
+<!--   <script src="../vendor/jquery.mobile-1.4.5.min.js"></script> -->
+
+  
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../vendor/own.css">
+  <link rel="stylesheet" type="text/css" href="../vendor/sweetalert2.css">
+
+  <link rel="stylesheet" type="text/css" href="../vendor/elusive-icons.css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+            <!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+              input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+                html{height: 100%}
+                body{height: 100%}
+
+
+                .form-signin {
+                        width: 100%;
+                        max-width: 330px;
+                        padding: 15px;
+                        margin: 0 auto;
+                      }
+                .form-signin .form-control {
+                        position: relative;
+                        box-sizing: border-box;
+                        height: auto;
+                        padding: 10px;
+                        font-size: 16px;
+                      }
+                .form-signin .form-control:focus {
+                        z-index: 2;
+                      }
+
+            </style>
+
+
+
+
+          <script type="text/javascript" charset="utf-8">
+
+          //Pang disable ng back button :D
+
+          // Wait for device API libraries to load
+          //
+          function onLoad() {
+              document.addEventListener("deviceready", onDeviceReady, false);
+
+
+
+              let timerInterval
+              Swal({
+                title: 'NOTE:',
+                html: '<li style="color:yellow"> INTERNET CONNECTION IS REQUIRED. </li> <br> <li style="color:yellow"> PRESSING THE BACK BUTTON WILL CLOSE THE ONLINE FEATURE.</li>',
+                timer: 10000,
+                onBeforeOpen: () => {
+                  Swal.showLoading()
+                  timerInterval = setInterval(() => {
+                    Swal.getContent().querySelector('strong')
+                      .textContent = Swal.getTimerLeft()
+                  }, 100)
+                },
+                onClose: () => {
+                  clearInterval(timerInterval)
+                }
+              }).then((result) => {
+                if (
+                  // Read more about handling dismissals
+                  result.dismiss === Swal.DismissReason.timer
+                ) {
+                  console.log('I was closed by the timer')
+                }
+              })
+
+
+
+
+
+
+
+
+
+          }
+
+          // device APIs are available
+          //
+          function onDeviceReady() {
+              // Register the event listener
+              document.addEventListener("backbutton", onBackKeyDown, false);
+          }
+
+          // Handle the back button
+          //
+          function onBackKeyDown() {
+ 
+            var txt;
+              var r = confirm("Do you want to return home?");
+              if (r == true) {
+                  txt = "Good bye!";
+                  window.location = "../games/index.html";
+              } else {
+                  txt = "Great";
+              }
+
+
+          }
+
+
+
+          </script>
+
+
+<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../media/image/loader.gif) center no-repeat #fff;
+}
+</style>
+
+
+<script type="text/javascript">
+  //paste this code under the head tag or in a separate js file.
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  
+</script>
+
+
+
+<script type="text/javascript" src="barcodescanner.js"></script>
+
+</head>
+
+
+
+
+
+
+
+<style type="text/css">
+
+          .hero-bkg-animated {
+            background: #7714d1 url(../img/bg.png) repeat 0 0;
+            width: 100%;
+            margin: 0;
+            height:100%;
+            box-sizing: border-box;
+            -webkit-animation: slide 20s linear infinite;
+            background-size: auto 100%;
+          }
+
+          .hero-bkg-animated h1 {
+            font-family: sans-serif;
+          }
+
+          @-webkit-keyframes slide {
+              from { background-position: 0 bottom; }
+              to { background-position: -400px bottom; }
+          }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body onload="onLoad()" class="hero-bkg-animated" style="height: 100%">
+<div class="se-pre-con"></div>		
+
+
+<script type="text/javascript">
+
+	function kasali() {
+	          	
+             cordova.plugins.barcodeScanner.scan(
+                function (result) {
+
+                  var IDnum = result.text;
+                 /* eto na yung gagamitin kong login ng mga bata scan lang barcode sa ID tapos eto na ibabato ko sa PHP :D
+
+
+                 alert("We got a barcode\n" +
+                          "Result: " + result.text + "\n" +
+                          "Format: " + result.format + "\n" +
+                          "Cancelled: " + result.cancelled);*/
+
+
+                /*    document.getElementById('hoho').innerHTML=IDnum;
+                    alert("Shit eto yung result text nyang iniscan mo: \n \n" + IDnum);*/
+
+
+
+
+
+                    var cj = "http://scihive.rf.gd/login_process_1.php?uname=" + IDnum;	
+                    var hola = cordova.InAppBrowser.open(cj,'_parent','location=no,zoom=no,shouldPauseOnSuspend=yes,clearsessioncache=yes,clearcache=yes');
+                        hola.addEventListener('loaderror', function(event) {
+                        hola.close(); 
+                      alert("An Error Occured. Make sure you have internet connection."); 
+
+                    });
+
+    
+                }, 
+
+                function (error) {
+                    alert("Scanning failed: " + error);
+                }
+             );
+   }
+
+          
+
+
+
+function bisita(){
+
+    var uName = document.getElementById("xUsername").value;
+    var uPassword = document.getElementById("xPassword").value;
+    
+    var guestdesu = "http://scihive.rf.gd/login_process_2.php?uname=" + uName + "&uPassword=" + uPassword ;
+    var diosa =	cordova.InAppBrowser.open(guestdesu,'_parent','location=no,zoom=no,shouldPauseOnSuspend=yes,clearsessioncache=yes,clearcache=yes');
+    diosa.addEventListener('loaderror', function(event) {
+    diosa.close(); 
+    alert("An Error Occured. Make sure you have internet connection.");
+
+  });
+
+}
+
+</script>
+
+
+
+
+
+
+
+<center>
+	
+  <br>
+
+
+  <img src="scihive_online.png" width="90%" class="jellyrice">
+
+  <br><br>
+
+
+
+  <div class="form-signin">
+ 
+    <div class="input-group mb-3">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-user"></i></span>
+      </div>
+      <input style="outline: none!important" type="text" id="xUsername" class="form-control input_user" value="" required placeholder="Username">
+    </div>
+
+    <div class="input-group mb-2">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-key"></i></span>
+      </div>
+      <input style="outline: none!important" type="password" id="xPassword" class="form-control input_pass" value="" required placeholder="Password">
+    </div>
+
+    <br>
+
+    <a class="btn btn-warning btn-block" onclick="bisita()" style="font-size: 17pt"> <i class="fas fa-sign-in-alt"></i> Log-In </a>
+
+
+
+
+    <br>
+    <h6 style="color: white">-- OR -- </h6>
+    <br>
+
+    <a class="btn btn-warning btn-block" onclick="kasali()" style="font-size: 17pt"> <i class="fas fa-camera"></i> Scan ID Barcode </a>
+
+  </div>
+
+
+</center>
+
+
+
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script crossorigin type="text/javascript" src="../vendor/sweetalert2.js"></script>
+</body>
+
+</html>

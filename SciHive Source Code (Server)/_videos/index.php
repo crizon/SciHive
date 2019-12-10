@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html style="background-color: black; height: 100%">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>SciHive</title>
+        <style>
+            html,body,button{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="vendor/jquery-1.11.1.min.js"></script>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+   
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; outline: none !important
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+            .bgDark{background-color: #000000; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%2329261c' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+
+            a {color: black !important; text-decoration: none !important;}
+
+            li::before {
+                content: url(yt.png);
+                font-weight: bold;
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1em;
+            }
+
+            .bgVid{margin-top: 5px; margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 3px outset orange; background-image: url(film.jpg); background-size: 100% 100%; font-weight: bold;}
+
+
+            </style>
+
+
+
+
+    </head>
+    <body class="bgDark">
+
+
+
+
+<div class="btn-warning" style="height: 55px; width: 100%;top: 0; right: 0;">
+  <button style="float: left" class="btn btn-warning btn-sm" onclick="location.assign('../index.php')"> <h1> ◀ </h1></button>
+  <center><img src="videos.png" width="40%" style="float: left"></center>
+</div>
+
+
+
+
+
+    
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <h4><i class="fas fa-fw fa-book-reader"></i>General Science</h4>
+        <a href="https://www.youtube.com/watch?v=hDQ8ggroeE4"><li class="bgVid"> Science </li></a>
+        <a href="https://youtu.be/xctlaTmJ_zQ"><li class="bgVid"> Science Tricks </li></a>
+        <a href="https://www.youtube.com/watch?v=4MHn9Q5NtdY"><li class="bgVid"> Science Experiments 1 </li></a>
+        <a href="https://www.youtube.com/watch?v=EelaHwqvB9Q"><li class="bgVid"> Science Experiments 2 </li></a>
+        <a href="https://www.youtube.com/watch?v=v_IE8oAjaBc"><li class="bgVid"> Branches of Science </li></a>
+        <a href="https://www.youtube.com/watch?v=ICpIBtDAwrI"><li class="bgVid"> Laboratory Equipment </li></a>
+        <a href="https://www.youtube.com/watch?v=Ko4TPlEg2sU"><li class="bgVid"> Scientific Attitudes </li></a>
+    </div>
+
+
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <h4><i class="fas fa-fw fa-cube"></i></i>Matter</h4>
+        <a href="https://www.youtube.com/watch?v=QQsybALJoew"><li class="bgVid"> What is Matter </li></a>
+        <a href="https://www.youtube.com/watch?v=jmm1J2yI9tk"><li class="bgVid"> States of Matter </li></a>
+        <a href="https://www.youtube.com/watch?v=wyRy8kowyM8"><li class="bgVid"> All About Matter </li></a>
+        <a href="https://www.youtube.com/watch?v=KRvsPh4pU90"><li class="bgVid"> Classification of Matter </li></a>
+        <a href="https://www.youtube.com/watch?v=ELchwUIlWa8"><li class="bgVid"> Mattter Matters </li></a>
+    </div>
+
+
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <h4><i class="fas fa-fw fa-cat"></i></i>Living Things</h4>
+        <a href="https://www.youtube.com/watch?v=p51FiPO2_kQ"><li class="bgVid"> Living & Non-Living Things </li></a>
+        <a href="https://www.youtube.com/watch?v=30qOijVBS7o"><li class="bgVid"> Characteristics of Living Things </li></a>
+        <a href="https://www.youtube.com/watch?v=gEUu-A2wfSE"><li class="bgVid"> Human Body Systems </li></a>
+        <a href="https://www.youtube.com/watch?v=Ae4MadKPJC0"><li class="bgVid"> Human Body 101 </li></a>
+        <a href="https://www.youtube.com/watch?v=LReJG7PrXFY"><li class="bgVid"> Human </li></a>
+        <a href="https://www.youtube.com/watch?v=OQFmspS9Rac"><li class="bgVid"> Animal Kingdom </li></a>
+        <a href="https://www.youtube.com/watch?v=SmNaKo1D5b4"><li class="bgVid"> Animal Kingdom 2 </li></a>
+        <a href="https://www.youtube.com/watch?v=vRVrUsxqy0E"><li class="bgVid"> Animals Encyclopedia </li></a>
+        <a href="https://www.youtube.com/watch?v=mRidGna-V4E"><li class="bgVid"> Classification of Animals </li></a>
+        <a href="https://www.youtube.com/watch?v=B6C9PAiWsjQ"><li class="bgVid"> Animal Facts </li></a>
+        <a href="https://www.youtube.com/watch?v=FqgN7rhbdvc"><li class="bgVid"> Animal Reproduction </li></a>
+        <a href="https://www.youtube.com/watch?v=dz1p2QzNcm4"><li class="bgVid"> Plants Science </li></a>
+        <a href="https://www.youtube.com/watch?v=8-G7D_sy7qE"><li class="bgVid"> Introduction to Botany </li></a>
+        <a href="https://www.youtube.com/watch?v=sCepDFnY6l4"><li class="bgVid"> Facts About Plants </li></a>
+        <a href="https://www.youtube.com/watch?v=ExaQ8shhkw8"><li class="bgVid"> Reprodution of Plants</li></a>
+    </div>
+
+
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <h4><i class="fas fa-fw fa-running"></i>Force | Motion | Energy</h4>
+        <a href="https://www.youtube.com/watch?v=rfeVlNL7d9U"><li class="bgVid"> Force and Motion </li></a>
+        <a href="https://www.youtube.com/watch?v=mEg5GOVpUlE"><li class="bgVid"> Push and Pull </li></a>
+        <a href="https://www.youtube.com/watch?v=WSY4HzWZIlo"><li class="bgVid"> Force, Motion and Energy</li></a>
+        <a href="https://www.youtube.com/watch?v=dTgMb2HEN1E"><li class="bgVid"> Types of Force </li></a>
+        <a href="https://www.youtube.com/watch?v=1U8a4_1q9bo"><li class="bgVid"> Types of Motion </li></a>
+        <a href="https://www.youtube.com/watch?v=yaK8RnGY-eM"><li class="bgVid"> Types of Energy </li></a>
+        <a href="https://www.youtube.com/watch?v=i_CijGuk7fw"><li class="bgVid"> Physics </li></a>
+        <a href="https://www.youtube.com/watch?v=LEHR8YQNm_Q"><li class="bgVid"> Newton's 1st Law of Motion </li></a>
+        <a href="https://www.youtube.com/watch?v=iCqm5uxc2dE"><li class="bgVid"> Real World </li></a>
+    </div>
+
+
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <h4><i class="fas fa-fw fa-globe-asia"></i>Earth | Space</h4>
+        <a href="https://www.youtube.com/watch?v=MPuCCvJ6BsM"><li class="bgVid"> Philippines Geography </li></a>
+        <a href="https://www.youtube.com/watch?v=33nVonMhfaU"><li class="bgVid"> Philippines Geographic Challenge </li></a>
+        <a href="https://www.youtube.com/watch?v=NXovEYsng1c"><li class="bgVid"> Philippines Geography 2 </li></a>
+        <a href="https://www.youtube.com/watch?v=I6nwUsky3Ps"><li class="bgVid"> PH: Landforms & Waterforms </li></a>
+        <a href="https://www.youtube.com/watch?v=5vhkgiV9_js"><li class="bgVid"> PH: Landforms & Waterforms 2 </li></a>
+        <a href="https://www.youtube.com/watch?v=b8szzzantdo"><li class="bgVid"> Natural Resources </li></a>
+        <a href="https://www.youtube.com/watch?v=-xGLpYlGcf0"><li class="bgVid"> PH: Abundant Minerals </li></a>
+        <a href="https://www.youtube.com/watch?v=ZSk5cCS3T5Q"><li class="bgVid"> PH: Mineral Deposits </li></a>
+        <a href="https://www.youtube.com/watch?v=IDhapt7nw4A"><li class="bgVid"> The Planet Earth </li></a>
+        <a href="https://www.youtube.com/watch?v=Qd6nLM2QlWw"><li class="bgVid"> Our Solar System </li></a>
+        <a href="https://www.youtube.com/watch?v=eXiVGEEPQ6c"><li class="bgVid"> Structure of Earth </li></a>
+        <a href="https://www.youtube.com/watch?v=McJrAMJMSQ0"><li class="bgVid"> Facts about Earth </li></a>
+        <a href="https://www.youtube.com/watch?v=DtiRn0Ecpjc"><li class="bgVid"> Get to Know Your Galaxy</li></a>
+        <a href="https://www.youtube.com/watch?v=RubnGwhcT6E"><li class="bgVid"> Milky Way Galaxy</li></a>
+    </div>
+
+    <div style="background-color: #ffc107;border-radius:10px; width: 90%; margin: 5%; padding: 5px">
+        <b>DISCLAIMER</b><br><br>
+        The developers of SciHive hereby declare that we do not own any rights to these videos. All rights belong to the owners. No Copyright Infringement Intended. It has been linked for the purpose of providing educational materials for students.
+        <br><br>
+        SciHive mobile app may contain links to external websites that are not provided or maintained by or in any way affiliated with.
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script crossorigin type="text/javascript" src="vendor/sweetalert2.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

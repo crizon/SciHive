@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>Solar System</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">Solar System</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+	
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> Solar System</h3>	
+		
+		</div>
+
+
+	<script type="text/javascript" src="../../vendor/model-viewer.js"></script>
+    <center>
+        <model-viewer style="width: 100%; height: 300px" src="Earth/solar.glb" auto-rotate camera-controls background-image="Earth/bg2.jpg">
+        </model-viewer>
+        3D Model (Touch and Rotate)
+    </center>
+    <br>
+    <br>
+
+	
+
+	<p>
+        The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly. Of the objects that orbit the Sun directly, the largest are the eight planets, with the remainder being smaller objects, such as the five dwarf planets and small Solar System bodies.<br><br>
+
+        Known minor planets: 796,354 (as of 2019-08-27)<br><br>
+        Known planets: 8 (Mercury; Venus; Earth; Mars; Jupiter; Saturn; Uranus; Neptune)<br><br>
+
+        <li>The solar system includes the Sun and all the objects that orbit around it due to its gravity. This includes things such as planets, comets, asteroids, meteoroids and moons.</li><br>
+
+        <li>The Solar System formed around 4.6 billion years ago.</li><br>
+
+        <li>There are eight planets in the Solar System. The four inner planets are Mercury, Venus, Earth and Mars while the four outer planets are Jupiter, Saturn, Uranus and Neptune.</li><br>
+
+        <li>The inner planets (also known as terrestrial planets) are smaller and made mostly of rock and metal.</li><br>
+
+        <li>The outer planets (also known as gas giants) are much larger and made mostly of hydrogen, helium and other gases.</li><br>
+
+        <li>As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake & Haumea.</li><br>
+
+        <li>There is an asteroid belt which lies between the orbits or Mars and Jupiter, it features a large number of irregular shaped asteroids.</li><br>
+
+        <li>For thousands of years humans were unaware of the Solar System and believed that Earth was at the center of the Universe.</li><br>
+
+        <li>Astronomers such as Nicolaus Copernicus, Galileo Galilei, Johannes Kepler and Isaac Newton helped develop a new model that explained the movement of the planets with the Sun at the center of the Solar System.</li><br>
+
+        <li>The Sun contains 99.86 percent of the Solar System's known mass, with Jupiter and Saturn making up making up most of the rest. The small inner planets which include Mercury, Venus, Earth and Mars make up a very small percentage of the Solar System's mass</li><br>.
+
+        <img src="Earth/solar1.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/solar2.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/solar3.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/solar4.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br><br>
+
+        <img src="Earth/solar5.jpg" width="100%" style="border: 5px outset orange; border-radius: 25px">
+        <br>
+
+
+
+
+    </p>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "Solar System. The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly. Of the objects that orbit the Sun directly, the largest are the eight planets, with the remainder being smaller objects, such as the five dwarf planets and small Solar System bodies. Known minor planets: 796,354. Known planets: 8 Mercury; Venus; Earth; Mars; Jupiter; Saturn; Uranus; Neptune. The solar system includes the Sun and all the objects that orbit around it due to its gravity. This includes things such as planets, comets, asteroids, meteoroids and moons. The Solar System formed around 4.6 billion years ago. There are eight planets in the Solar System. The four inner planets are Mercury, Venus, Earth and Mars while the four outer planets are Jupiter, Saturn, Uranus and Neptune. The inner planets (also known as terrestrial planets) are smaller and made mostly of rock and metal. The outer planets (also known as gas giants) are much larger and made mostly of hydrogen, helium and other gases. As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake & Haumea. There is an asteroid belt which lies between the orbits or Mars and Jupiter, it features a large number of irregular shaped asteroids. For thousands of years humans were unaware of the Solar System and believed that Earth was at the center of the Universe. Astronomers such as Nicolaus Copernicus, Galileo Galilei, Johannes Kepler and Isaac Newton helped develop a new model that explained the movement of the planets with the Sun at the center of the Solar System. The Sun contains 99.86 percent of the Solar System's known mass, with Jupiter and Saturn making up making up most of the rest. The small inner planets which include Mercury, Venus, Earth and Mars make up a very small percentage of the Solar System's mass.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

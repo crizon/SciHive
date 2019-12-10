@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<title>Motion</title>
+
+	<style>
+            html,body{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="../../vendor/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/animate.css">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../vendor/elusive-icons.css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../vendor/own.css">
+
+
+
+
+
+
+
+<!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+            <script type="text/javascript">
+            	
+            </script>
+
+
+    </head>
+
+<body style="background-color: black; background-image: url(../../img/hexellence.png)">
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+
+	<center>
+		<h4 style="background-color: #7714d1; padding: 5px; top:0 ; width: 100%; z-index: 1; position: fixed; color: white; background-image: url(../../img/hexellence.png);">Motion</h4>
+		<h4 onclick="balik()" class="fas fa-fw fa-chevron-left" style="z-index: 2; position: fixed; left: 5px; top: 10px; color: white"></h4>
+	</center>
+
+<br>
+<br>
+
+	
+
+	<div style="text-align: justify; padding: 5%; margin: 2.5%; width: 95%;  background-color: white;border-radius: 5px">
+
+		<div class="row" style="margin: 0">
+			
+			<div id="tts">
+				<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3> Motion</h3>	
+		
+		</div>
+
+
+	<script type="text/javascript" src="../../vendor/model-viewer.js"></script>
+
+    <center>
+    	<img src="motion1.jpg" width="100%" style="border: 5px outset orange"><br><br>
+    </center>
+		
+
+	
+
+	<p>In everyday life, we walk, drive cars, and lift objects. All these tasks need a force to be performed. So, it is necessary to understand this force scientifically. This force was described scientifically by Isaac Newton. He described the force and its relationships in his laws that are known today as the Newton's Laws of Motion.
+	</p><br>
+
+
+
+
+
+
+
+
+	<div class="row" style="margin: 0">
+			
+			<div id="tts2">
+				<button onclick="read2()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3>First Law of Motion</h3>	
+		
+	</div>
+
+	<img src="motion2.jpg" width="100%" style="border: 5px outset orange"><br><br>
+
+	<p>
+		The first law states that an object in motion will continue to move with same speed in the same direction until another force acts on it. Furthermore, an object which is at rest (not moving) will not move until some external force acts on it.<br><br>
+
+		You may be thinking, how this is possible. Because as you kick a ball, it will immediately start to slow down and will come to rest at a distance. This happens because of air friction. As you kick a ball, frictional forces immediately start to oppose the motion of the ball until it comes to rest.
+	</p><br>
+
+
+
+
+	
+
+
+	<div class="row" style="margin: 0">
+			
+			<div id="tts3">
+				<button onclick="read3()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3>Second Law of Motion</h3>	
+		
+	</div>
+
+	<img src="motion3.jpg" width="100%" style="border: 5px outset orange"><br><br>
+
+	<p>
+		The Second Law states that force is equal to mass times the acceleration. Let's say it in other words, the more force is applied to an object the more acceleration will be produced in it. As a result, the object will speed up faster. For example, if you hit a ball harder, it will go faster and farther.<br><br>
+
+		The Second law of motion can also be defined in the mathematical form. It is defined as, <b>F = mass * acceleration</b>.<br><br>
+
+		<b>F = m*a</b>; m is the mass and "a" is the acceleration
+	</p><br>
+
+
+
+
+
+
+
+	<div class="row" style="margin: 0">
+			
+			<div id="tts4">
+				<button onclick="read4()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3>Third Law of Motion</h3>	
+		
+	</div>
+	<h6>(Every action has reaction)</h6>
+
+	<img src="motion4.jpg" width="100%" style="border: 5px outset orange"><br><br>
+
+	<p>You may be familiar with the statement of this law which states that "every action has equal and opposite reaction". In other words, each applied force also has the opposing force, which has the same magnitude of applied force but in opposite direction. For example, when you kick a ball with 10 N force, your feet will also experience the same 10 N force from the ball.
+	</p><br>
+
+
+
+
+
+	<div class="row" style="margin: 0">
+			
+			<div id="tts5">
+				<button onclick="read5()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>
+			</div>
+
+			<span style="color: rgba(0,0,0,0);">h</span>
+
+			<h3>Fun Facts</h3>	
+		
+	</div>
+
+	<img src="motion5.jpg" width="100%" style="border: 5px outset orange"><br><br>
+	
+	<li>It is said that Isaac Newton got the idea for gravity when an apple fell off a tree and hit him on the head.</li><br>
+
+	<li>Forces are measured in Newtons. This is after Isaac Newton, not fig newtons, even if they are tasty.</li><br>
+
+	<li>Gases and liquids push out in equal forces in all directions. This is called Pascal's Law because it was discovered by the scientist Blaise Pascal.</li><br>
+
+	<li>When you go upside down in a roller coaster loop-the-loop, a special kind of force called "centripetal force" keeps you in your seat and from falling out.</li>
+	<br>
+
+	
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//READ THE TEXT TO SPEECH	
+	function read1(){
+
+		var line_1 = "In everyday life, we walk, drive cars, and lift objects. All these tasks need a force to be performed. So, it is necessary to understand this force scientifically. This force was described scientifically by Isaac Newton. He described the force and its relationships in his laws that are known today as the Newton’s Laws of Motion.";
+
+	    TTS.speak({
+	        text: line_1,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock='<button onclick="stop1()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+
+	}
+
+
+
+	function read2(){
+
+		var line_2 = "First law of Motion. The first law states that an object in motion will continue to move with same speed in the same direction until another force acts on it. Furthermore, an object which is at rest (not moving) will not move until some external force acts on it.
+
+You may be thinking, how this is possible. Because as you kick a ball, it will immediately start to slow down and will come to rest at a distance. This happens because of air friction. As you kick a ball, frictional forces immediately start to oppose the motion of the ball until it comes to rest.";
+
+	    TTS.speak({
+	        text: line_2,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock2='<button onclick="stop2()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts2").innerHTML = codeBlock2;
+
+	}
+
+
+
+	function read3(){
+
+		var line_3 = "Second Law of Motion. The Second Law states that force is equal to mass times the acceleration. Let’s say it in other words, the more force is applied to an object the more acceleration will be produced in it. As a result, the object will speed up faster. For example, if you hit a ball harder, it will go faster and farther. The Second law of motion can also be defined in the mathematical form. It is defined as, F = mass times acceleration. F equals m times a. m is the mass and a is the acceleration";
+
+	    TTS.speak({
+	        text: line_3,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock3='<button onclick="stop3()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts3").innerHTML = codeBlock3;
+
+	}
+
+
+
+
+	function read4(){
+
+		var line_4 = "Third Law of Motion .Every action has reaction. You may be familiar with the statement of this law which states that “every action has equal and opposite reaction”. In other words, each applied force also has the opposing force, which has the same magnitude of applied force but in opposite direction. For example, when you kick a ball with 10 N force, your feet will also experience the same 10 N force from the ball.";
+
+	    TTS.speak({
+	        text: line_4,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock4='<button onclick="stop4()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts4").innerHTML = codeBlock4;
+
+	}
+
+
+
+
+
+	function read5(){
+
+		var line_5 = "Fun facts. It is said that Isaac Newton got the idea for gravity when an apple fell off a tree and hit him on the head. Forces are measured in Newtons. This is after Isaac Newton, not fig newtons, even if they are tasty. Gases and liquids push out in equal forces in all directions. This is called Pascal's Law because it was discovered by the scientist Blaise Pascal. When you go upside down in a roller coaster loop-the-loop, a special kind of force called centripetal force keeps you in your seat and from falling out.";
+
+	    TTS.speak({
+	        text: line_5,
+	        locale: 'en-US',
+	        rate: 1
+	    });
+
+	    //
+	    var codeBlock5='<button onclick="stop5()" class="btn btn-secondary"><i class="fas fa-fw fa-volume-mute"></i></button>';
+	    document.getElementById("tts5").innerHTML = codeBlock5;
+
+	}
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH
+	function stop1(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock='<button onclick="read1()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts").innerHTML = codeBlock;
+	}
+
+
+
+	function stop2(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock2='<button onclick="read2()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts2").innerHTML = codeBlock2;
+	}
+
+
+
+	function stop3(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock3='<button onclick="read3()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts3").innerHTML = codeBlock3;
+	}
+
+
+	function stop4(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock4='<button onclick="read4()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts4").innerHTML = codeBlock4;
+	}
+
+
+	function stop5(){
+		TTS.speak({text: ''});
+
+		//set the new icon to button
+		var codeBlock5='<button onclick="read5()" class="btn btn-secondary"><i class="fas fa-fw fa-play"></i></button>';
+	    document.getElementById("tts5").innerHTML = codeBlock5;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using back button
+	document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function () {
+                        TTS.speak({text: ''});
+                        window.history.back();
+
+                    }, false );
+            }
+
+//STOP THE TEXT TO SPEECH AND GO BACK HISTORY using a link button
+    function balik(){
+    	TTS.speak({text: ''});
+        window.history.back();
+    }
+</script>
+
+
+
+
+
+
+	<script crossorigin type="text/javascript" src="../../vendor/sweetalert2.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

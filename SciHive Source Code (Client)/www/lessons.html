@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html style="background-color: black">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>SciHive</title>
+        <style>
+            html,body,button{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="vendor/jquery-1.11.1.min.js"></script>
+        <script src="vendor/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="vendor/animate.css">
+        <link rel="stylesheet" type="text/css" href="vendor/jquery.mobile-1.4.5.min.css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendor/elusive-icons.css">
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="vendor/own.css">
+
+
+        <style>
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+              position: fixed;
+              left: 0px;
+              top: 0px;
+              width: 100%;
+              height: 100%;
+              z-index: 9999;
+              background: url(img/bee1.gif) center no-repeat white;
+              background-size: 50%;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+          $(window).load(function() {
+            $(".se-pre-con").fadeOut("slow");;
+          });
+        </script>
+
+
+
+
+
+
+        <script type="text/javascript" charset="utf-8">
+
+            //DISABLE BACK BUTTON -- I DONT NEED YOU
+            document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function (e) {
+                        e.preventDefault();
+                    }, false );
+            }
+
+
+
+            //SCREEN ORIENTATION LOCK OR UNLOCK --------------------------
+            function baam(){
+                screen.orientation.unlock();
+                screen.orientation.lock('portrait');
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+        <!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+            h5{color: gray}
+
+
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+    </head>
+    <body style="background-color: black" onload="baam();sortList()">
+        <script type="text/javascript" src="cordova.js"></script>
+        <div class="se-pre-con">
+            <center>
+                <br>
+                <i class="fas fa-fw fa-spinner spin_it"></i>
+                Loading . . .
+            </center>
+        </div>
+
+
+
+<style type="text/css">
+    .pota{border-radius: 25px; color: white;padding: 5px !important;background-color: #7714d1; background-image: url(img/hexellence.png);
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            border: none !important;
+            outline: none !important;}
+</style>
+
+
+
+
+<!-- <script type="text/javascript">
+    function popperu(){
+
+       // TTS.speak({text: 'What would you like to do?'});
+
+        Swal({
+          type: '',
+          title: '',
+          text:'',
+          animation: false,
+          customClass: 'animated rubberBand pota',
+          showConfirmButton: false,
+          confirmButtonText: '<i class="fas fa-fw fa-times-circle"></i>',
+          //padding: '3em',
+          html: '<p style="color:white">What would you like to do?</p><br><a href="#lessons" data-transition="pop"> <button class="btn btn-lg btn-warning animated pulse infinite" style="transform: rotate(20deg); margin: 8px; border: 2px outset skyblue; z-index: 5; border-radius: 50px 0; color: white; font-size: 30px"> <i class="fas fa-fw fa-lightbulb"></i> </button> </a><a href="games/index.html" rel="external"> <button class="btn btn-lg btn-warning animated pulse infinite" style="transform: rotate(20deg); margin: 8px; border: 2px outset skyblue; z-index: 5; border-radius: 50px 0; color: white; font-size: 30px"> <i class="fas fa-fw fa-play"></i> </button> </a><a href="aframe.html" rel="external"><button class="btn btn-lg btn-warning animated pulse infinite" style="transform: rotate(20deg); margin: 8px; border: 2px outset skyblue; z-index: 5; border-radius: 50px 0; color: white; font-size: 30px"> <i class="fas fa-fw fa-paper-plane"></i></button></a>',
+          backdrop: `rgba(0,0,0,0.4)
+                    url("")
+                    center left
+                    no-repeat`
+        })
+
+    }
+</script> -->
+
+
+
+
+
+<script type="text/javascript" src="vendor/own.js"> </script>
+
+
+
+
+
+<!--  LESSONS PAGE -------------------------------------------------------------------------------------------------- -->
+
+        <div data-role="page" id="lessons" style="background-image: url(img/lgbg.png); background-size: 100%; background-position: top;">
+
+            
+            <div onclick="openNav()" class="menutton" style="background-image: url(img/hexellence.png); background-color: #f7f7f7; border: 2px ridge #ffc107; left: 0;top: 0; position: fixed; z-index: 5 ;height: 45px; width: 50px">
+               <center> <img class="animated pulse tada infinite" src="img/BEEBOT.png" width="40px"> </center>
+            </div>
+
+             
+
+            <div class="hyperX" style="outline: none !important; width: 100%; right: 0; position: fixed; background-image: url(img/hexellence.png)">
+                <iframe src="lessons/index.html" name="lessons_iframe" id="my_iframe" style="outline: none !important; width: 100%; height: 100%; border: none !important; user-select: none !important"></iframe>
+            </div>
+
+
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "190px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+ 
+<div id="mySidenav" class="sidenav" style="background-image: url(img/hexellence.png); background-color: #f7f7f7; border-right: 4px ridge orange;">
+    <center>
+     <table style="height: 90%; width: 95%">
+
+                    <tr style="height: 25px">
+                         <td align="center" style="border: none !important;">
+                            <a onclick="closeNav()" style="color: white; border-radius: 25px; width: 30%;" class="bg-dark">
+                                <p style="font-size: 15px !important"><i class="fas fa-fw fa-times"></i></p>
+                            </a>
+                        </td>
+                    </tr>
+                    
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a id="L_general" onclick="closeNav(); link1()" ontouchstart="link1()" href="lessons/general.html" target="lessons_iframe"  class="btn" style="background-color: #f0ad4e;border: 2px outset orange; font-weight: bold;color: white; box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);">
+                        <p style="font-size: 15px !important; margin-left: 5px"> <i class="fas fa-fw fa-book-reader"></i> General Science</p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a id="L_matter" onclick="closeNav(); link2()" ontouchstart="link2()" href="lessons/matter.html" target="lessons_iframe" class="btn" style="background-color: #f0ad4e;border: 2px outset orange; font-weight: bold;color: white; box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);">
+                        <p style="font-size: 15px !important; margin-left: 5px"> <i class="fas fa-fw fa-cube"></i> Matter</p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a id="L_living_things" onclick="closeNav(); link3()" ontouchstart="link3()" href="lessons/living_things.html" target="lessons_iframe" class="btn" style="background-color: #f0ad4e;border: 2px outset orange; font-weight: bold;color: white; box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);">
+                        <p style="font-size: 15px !important; margin-left: 5px"> <i class="fas fa-fw fa-cat"></i> Living Things</p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a id="L_force_motion_energy" onclick="closeNav(); link4()" ontouchstart="link4()" href="lessons/force_motion_energy.html" target="lessons_iframe" class="btn" style="background-color: #f0ad4e;border: 2px outset orange; font-weight: bold;color: white;box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);">
+                        <p style="font-size: 15px !important; margin-left: 5px"> <i class="fas fa-fw fa-running"></i> Force | Motion</p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+                    <tr style="height: 25px;">
+                        <td align="center">
+                            <a id="L_earth_space" onclick="closeNav(); link5()" ontouchstart="link5()" href="lessons/earth_space.html" target="lessons_iframe" class="btn" style="background-color: #f0ad4e;border: 2px outset orange; font-weight: bold;color: white;box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.3);">
+                        <p style="font-size: 15px !important; margin-left: 5px"> <i class="fas fa-fw fa-globe-asia"></i> Earth | Space</p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+                    <tr style="height: 8px"></tr>
+
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a href="games/index.html" rel="external" style=" font-weight: bold;color: white; border-radius: 3px;" class="bg-dark">
+                                <p style="font-size: 20px !important"> <i class="fas fa-fw fa-home"></i> Home</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a data-toggle="modal" data-target="#bitap" style=" font-weight: bold;color: white; border-radius: 3px;" class="bg-dark">
+                        <p style="font-size: 20px !important"> <i class="fas fa-fw fa-search"></i> Search </p>
+                    </a>
+                        </td>
+                    </tr>
+
+
+                    <tr style="height: 25px">
+                        <td align="center">
+                            <a id="L_index" onclick="closeNav(); link6()" ontouchstart="link6()" href="lessons/index.html" target="lessons_iframe" style=" font-weight: bold;color: white; border-radius: 3px;" class="bg-dark">
+                        <!-- <p style="font-size: 20px !important"> <i class="fas fa-fw fa-question"></i> Help </p> -->
+                        <p style="font-size: 20px !important"> <i class="fas fa-fw fa-bars"></i> Lesson Menu </p>
+                    </a>
+                        </td>
+                    </tr>
+
+                    
+
+
+
+                    
+                </table>
+            </center>
+
+
+
+
+
+
+
+                                
+
+
+</div>
+
+
+
+<!-- <div style="background-image: url(img/hexellence.png); border: 2px ridge #ffc107; border-radius: 25px 0px 0px 25px; background-color: #7714d1; width: 50px; height: 45px; position: fixed;top: 0px; right: 0px" data-toggle="modal" data-target="#chatbot" data-backdrop="static" class="animated pulse infinite">
+			   <center>
+			   	<p style="font-size: 25px !important; color: white" class="animated pulse tada infinite"> <i class="fas fa-fw fa-robot"></i></p> 
+			    	<img class="animated pulse tada infinite" src="img/robot.png" width="40px">
+			   </center>
+			</div> -->
+
+        
+         
+
+
+<!-- 
+          <script>
+                                function sortList() {
+                                  var list, i, switching, b, shouldSwitch;
+                                  list = document.getElementById("myUL");
+                                  switching = true;
+                                  /* Make a loop that will continue until
+                                  no switching has been done: */
+                                  while (switching) {
+                                    // start by saying: no switching is done:
+                                    switching = false;
+                                    b = list.getElementsByTagName("LI");
+                                    // Loop through all list-items:
+                                    for (i = 0; i < (b.length - 1); i++) {
+                                      // start by saying there should be no switching:
+                                      shouldSwitch = false;
+                                      /* check if the next item should
+                                      switch place with the current item: */
+                                      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+                                        /* if next item is alphabetically
+                                        lower than current item, mark as a switch
+                                        and break the loop: */
+                                        shouldSwitch = true;
+                                        break;
+                                      }
+                                    }
+                                    if (shouldSwitch) {
+                                      /* If a switch has been marked, make the switch
+                                      and mark the switch as done: */
+                                      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                                      switching = true;
+                                    }
+                                  }
+                                }
+                            </script> -->
+
+
+
+
+
+
+
+        <!-- MODAL FOR BITAP -->
+
+        <div class="modal fade" id="bitap" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: rgba(0,0,0,0); border:none">
+        <div class="modal-body" style="border: 5px solid #f0ad4e; border-radius: 25px; padding: 2px; background-color: #5bc0de; background-image: url(img/hexellence.png);">
+
+            <button style="margin-bottom: -60px" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i style="color: gray" class="fas fa-fw fa-times"></i>
+            </button>
+        
+                <center>
+                    <br>
+                    <h1> <i class="fab fa-fw fa-searchengin"></i> Search Lessons</h1>
+                    <p> <i class="fas fa-fw fa-laptop-code"></i> BITAP ALGORITHM <i class="fas fa-fw fa-laptop-code"></i> </p>
+                
+
+                <input onkeyup="myFunction()" id="myInput" placeholder="   Ex: Animals" class="form-control" type="text" style=" padding: 5px; width: 90%;margin: 10px; border-color: #f0ad4e" data-toggle="collapse" data-target="#Lessons">
+
+                </center>
+
+                            <div id="Lessons" class="collapse" style="height: 75%">
+                                
+                                  <ul id="myUL"><br>
+
+
+
+
+<!-- SCIENCE ================================================================================================ -->
+<h5>General Science:</h5>
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/general/science.html" rel="external">
+                                        Science
+                                        <span hidden="">Science basic what is Sci technology inventions knowledge</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/general/branches.html" rel="external">
+                                        Branches of Science
+                                        <span hidden="">Branches branch classification type kind applied physical earth life chemistry physics geology paleontology meteorology astronomy biology botany zoology ecology genetics</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/general/attitude.html" rel="external">
+                                        Scientist Attitude
+                                        <span hidden=""> traits character success virtue attitude careful judgement creativity critical mindedness curiosity humility intellectual honesty objectivity patience resourcefulness rationality </span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/general/labs.html" rel="external">
+                                        Laboratory Apparatus and Instruments
+                                        <span hidden="">tools equipment experiment bunsen burner test tube testube rack funnel erlenmeyer flask thermometer alcohol lamp wire gauze graduated cylinder beaker florence flask petri dish dropper microscope tongs cover slip magnifyer magnifying glass ring stand stirrer rubber slide</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+
+
+
+
+<!-- MATTER ===================================================================================================== -->
+<br><br><h5>Matter:</h5>
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter.html" rel="external">
+                                        Matter
+                                        <span hidden="">atoms compounds mass space volume plasma solid liquid gas state BEC oxygen structure atomic phase change stages water temperature</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/solid.html" rel="external">
+                                        Solid
+                                        <span hidden="">atoms compounds mass space volume plasma solid liquid gas state BEC oxygen structure atomic phase change stages water temperature rock holds shape talc</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/liquid.html" rel="external">
+                                        Liquid
+                                        <span hidden="">atoms compounds mass space volume plasma solid liquid gas state BEC oxygen structure atomic phase change stages water temperature shape cup ice fill gravity </span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/gas.html" rel="external">
+                                        Gas
+                                        <span hidden="">atoms compounds mass space volume plasma solid liquid gas state BEC oxygen structure atomic phase change stages water temperature shape atmosphere spread out molecules random gravity vapor clouds compressing</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/plasma.html" rel="external">
+                                        Plasma
+                                        <span hidden="">atoms compounds mass space volume plasma solid liquid gas state BEC oxygen structure atomic phase change stages water temperature shape atmosphere spread out molecules random gravity plasma neon northern lights charged particles fluorescent bulbs noble helium argon xenon stars</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/solution_mixture.html" rel="external">
+                                        Solutions
+                                        <span hidden="">solutions mixtures molecules mix mixed homogenous heterogeous concentrate dissolve chemistry solute solvent solubility colloids emulsified organic inorganic</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/matter/solution_mixture_2.html" rel="external">
+                                        Mixtures
+                                        <span hidden="">solutions mixtures molecules mix dissolve chemistry physical properties rocks ocean atmosphere tap distilled substances salt melt infinite iron magnet filtering gravity crush dust melt separate block </span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+
+ 
+
+
+
+<!-- LIVING THINGS ===================================================================================================== -->
+<br><br><h5>Living Things:</h5>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/skeletal.html" rel="external">
+                                        Skeletal System
+                                        <span hidden="">human system bones skeleton</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/muscular.html" rel="external">
+                                        Muscular System
+                                        <span hidden="">human system muscle tricep bicep glut abs abdomen macho</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/muscular.html" rel="external">
+                                        Digestive System
+                                        <span hidden="">human system stomach intestine liver saliva bolus food eat esophagus colon anus bladder appendix rectum poop </span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/respiratory.html" rel="external">
+                                        Respiratory System
+                                        <span hidden="">human system nose mouth breath breathing lungs air oxygen</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/circulatory.html" rel="external">
+                                        Circulatory System
+                                        <span hidden="">human system blood heart beats circulation cardio cardiovascular vessels pulse</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/nervous.html" rel="external">
+                                        Nervous System
+                                        <span hidden="">human system nervous brain mind cerebrum cerebellum stem pituitary gland hypothalamus cellebral nerves communicate emotion</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="http://www.biology4kids.com/files/systems_integument.html" rel="external">
+                                        Integumentary System
+                                        <span hidden="">human system skin nails hair</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="https://kidshealth.org/en/teens/male-repro.html" rel="external">
+                                        Male Reproductive System
+                                        <span hidden="">human system sex kantutan hahaha reproduction reproduce penis balls scrotum sperm cell zygote genitals male man boy testosterone testicle semen vagina pussy pekpek hahaha ovary fetus baby clitoris urethra labia genes egg cell hymen fallopian tubes hormones menstration period breast fertil 9 months</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="https://kidshealth.org/en/parents/female-reproductive-system.html" rel="external">
+                                        Female Reproductive System
+                                        <span hidden="">human system sex kantutan hahaha reproduction reproduce penis balls scrotum sperm cell zygote genitals male man boy testosterone testicle semen vagina pussy pekpek hahaha ovary fetus baby clitoris urethra labia genes egg cell hymen fallopian tubes hormones menstration period breast fertil 9 months</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/animals.html" rel="external">
+                                        Animals
+                                        <span hidden="">Zoo animalia multicellular eukaryotic organism zoology mammals birds fish reptiles amphibians insects lion tiger monkey dog cat birds sharks jellyfish monkey pig crocodile aligator lizard dinosaur hayop cells reproduction eggs nest</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/living_things/plants.html" rel="external">
+                                        Plants
+                                        <span hidden=""> living organism plants tree grass trees flowers bushes ferns mosses kindom plantae own food photosynthesis cuticle waxy eukaryotic spores  vascular nonvascular leaf bud roots stem soil sunlight carbon dioxide cell pollen</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Force Motion Energy ===================================================================================================== -->
+<br><br><h5>Force Motion Energy:</h5>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/force_motion_energy/skeletal.html" rel="external">
+                                        Force
+                                        <span hidden="">force motion energy push pull interactions objects change balance matter speed state dimension direction contact non-contact muscular frictional force mechanical friction magnetic electrostatic gravitational gravity physics</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/force_motion_energy/motion.html" rel="external">
+                                        Motion
+                                        <span hidden="">force motion energy mass forces law walk drive lift tasks Isaan Newton external acceleration action reaction physics</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/force_motion_energy/energy.html" rel="external">
+                                        Energy
+                                        <span hidden="">force motion energy work cook jump physics chemical electrical gravitational heat light nuclear potential renewable non-renewable power</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+
+
+
+
+
+
+
+
+<!-- Earth and Space ===================================================================================================== -->
+<br><br><h5>Earth and Space:</h5>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/direction.html" rel="external">
+                                        Sense of Direction
+                                        <span hidden="">sense direction wayfinding way location cognitive mas spatial awareness cognition</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/philippines.html" rel="external">
+                                        Philippines
+                                        <span hidden="">pilipinas asia republic population manila filipino tagalog peso people culture filipino nature crab corn shell tobacco banana rice pineapple coconut corals grains map volcano mountain sea ocean lake city place landforms waterforms land water</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/earth.html" rel="external">
+                                        Earth
+                                        <span hidden="">Earth life planet third solar system gallaxy milkyway universe</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/sun.html" rel="external">
+                                        Sun
+                                        <span hidden="">Earth life planet third solar system gallaxy milkyway universe sun galaxy heat star sol</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/solar.html" rel="external">
+                                        Moon
+                                        <span hidden="">Earth life planet third solar system gallaxy milkyway universe sun galaxy heat star moon luna lunar</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+                                    <li style="margin-top: 5%">
+                                        <a style="color: black;" href="lessons/earth_space/moon.html" rel="external">
+                                        Solar System
+                                        <span hidden="">Earth life planet third solar system gallaxy milkyway universe sun galaxy heat star moon luna lunar mercury venus earth mars jupiter saturn uranus neptune gravity orbit planets comets asteroids meteor meteoroids pluto ceres eris makemake haumea isaac newton galileo galilei johannes kepler universal</span>
+                                        <!-- ^^ HIDDEN TAGS NA GAGAMITIN NATIN HAHAHAHAHAHAHAHAHAH -->
+                                      </a>
+                                    </li>
+
+
+
+
+
+
+
+
+                                  </ul>
+
+                            </div>
+
+
+
+
+
+                            <script type="text/javascript">
+                                function myFunction() {
+                                    var input, filter, ul, li, a, i;
+                                    input = document.getElementById("myInput");
+                                    filter = input.value.toUpperCase();
+                                    ul = document.getElementById("myUL");
+                                    li = ul.getElementsByTagName("li");
+                                    for (i = 0; i < li.length; i++) {
+                                        a = li[i].getElementsByTagName("a")[0];
+                                        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                            li[i].style.display = "";
+                                        } else {
+                                            li[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            </script>
+
+
+            <br>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- END oF MODAL FOR BITAP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- MODAL FOR ChatBot -->
+
+<!--         <div class="modal fade" id="chatbot" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" style="padding: none">
+        <div class="modal-dialog modal-lg" role="document" style="padding: none">
+        <div class="modal-content" style="background-color: rgba(0,0,0,0); border:none; padding: none">
+        <div class="modal-body" style="padding: none;">
+
+            
+
+            <center>
+                <iframe style="margin-top: -130px; border-radius: 25px; border:2px outset orange; margin-bottom: none !important" height="400" width="100%" src="https://bot.dialogflow.com/673d62f5-977f-4aa1-8bff-4342e9d5721f"></iframe>
+            </center>
+
+           
+            <button style="margin-bottom: -60px" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i style="color: white" class="fas fa-fw fa-times"></i>
+            </button>
+
+        </div>
+        </div>
+        </div>
+        </div> -->
+
+        <!-- MODAL FOR ChatBot -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+<!-- END OF LESSONS PAGE -------------------------------------------------------------------------------------------------- -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script crossorigin type="text/javascript" src="vendor/sweetalert2.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

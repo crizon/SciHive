@@ -1,0 +1,84 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #ffc335;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+.menutton{background-color: #7714d1; border-radius: 0px 25px 25px 0px}
+.menutton:hover{background-color: rgba(66,161,244,.8); border-radius: 0px 25px 25px 0px}
+.menutton:active{background-color: #ffc107; border-radius: 0px 25px 25px 0px}
+
+
+
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+
+
+
+.spin_it {
+    animation-name: spin_this;
+    animation-duration: 4s;
+}
+
+
+@keyframes spin_this{
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+.scitton{background-color: #7714d1; color: white; border: 2px outset #7714d1;}
+
+
+
+@font-face { font-family: OJ; src: url('OJ.ttf');} 
+    
+@font-face { font-family: moon; src: url('moon.ttf');} 
+
+@font-face { font-family: cartoon; src: url('cartoon.ttf');} 

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html style="background-color: black">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>SciHive</title>
+        <style>
+            html,body,button{height: 100%}
+            .hyperX{height: 100%}
+        </style>
+        <script src="vendor/jquery-1.11.1.min.js"></script>
+        <script src="vendor/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="vendor/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="vendor/animate.css">
+        <link rel="stylesheet" type="text/css" href="vendor/jquery.mobile-1.4.5.min.css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendor/elusive-icons.css">
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="vendor/own.css">
+
+
+        <style>
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+              position: fixed;
+              left: 0px;
+              top: 0px;
+              width: 100%;
+              height: 100%;
+              z-index: 9999;
+              background: url(img/bee1.gif) center no-repeat white;
+              background-size: 50%;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+          $(window).load(function() {
+            $(".se-pre-con").fadeOut("slow");;
+          });
+        </script>
+
+
+
+
+
+
+        <script type="text/javascript" charset="utf-8">
+
+            //DISABLE BACK BUTTON -- I DONT NEED YOU
+            document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function (e) {
+                        e.preventDefault();
+                    }, false );
+            }
+
+
+
+            //SCREEN ORIENTATION LOCK OR UNLOCK --------------------------
+            function baam(){
+                screen.orientation.unlock();
+                screen.orientation.lock('portrait');
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+        <!-- TO DISABLE SELECTING -->
+            <style type="text/css">
+              
+            *
+            {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; outline: none !important
+            }
+
+            input
+            {
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            }
+
+            img { border: none; }
+
+            button:focus {
+              border: none;
+              outline: none;
+                }
+
+            input:focus {
+              border: none;
+              outline: none;
+                }
+
+
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+    <body style="background-color: black" onload="baam()">
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <div class="se-pre-con">
+            <center>
+                <br>
+                <i class="fas fa-fw fa-spinner spin_it"></i>
+                Loading . . .
+            </center>
+        </div>
+
+
+
+<style type="text/css">
+
+
+
+    .pota{border-radius: 25px; color: white;padding: 5px !important;
+            -webkit-user-select: auto !important;
+            -khtml-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+            border: 5px dotted orange!important;
+            outline: none !important;
+            background-color:#997b22e6; background-image: url(img/hexellence.png);
+            /*width: 85%*/
+        }
+
+    .hero-bkg-animated {
+  background: #7714d1 url(img/bg.png) repeat 0 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  height:100%;
+  box-sizing: border-box;
+  -webkit-animation: slide 20s linear infinite;
+  background-size: auto 100%;
+}
+
+.hero-bkg-animated h1 {
+  font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 bottom; }
+    to { background-position: -400px bottom; }
+}
+
+.glow {
+  animation: glowing 1000ms infinite;
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -50px orange; }
+  40% { box-shadow: 0 0 200px orange; }
+  60% { box-shadow: 0 0 200px orange; }
+  100% { box-shadow: 0 0 -50px orange; }
+}
+
+.ikot{
+  animation: spin 500ms infinite;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+</style>
+
+
+
+
+<script type="text/javascript">
+    function popperu(){
+
+        //TTS.speak({text: 'What would you like to do?'});
+
+        navigator.vibrate(100);
+
+        Swal({
+          type: '',
+          title: '',
+          text:'',
+          animation: false,
+          customClass: 'animated rubberBand pota',
+          showConfirmButton: false,
+          confirmButtonText: '<i class="fas fa-fw fa-times-circle"></i>',
+         // padding: '3em',
+          html: '<p style="color:white">What would you like to do?</p><br><a href="lessons.html" rel="external"> <button class="btn btn-lg  animated pulse infinite" style="background-image:linear-gradient(to bottom, orange, yellow); transform: rotate(20deg); margin: 8px; border: 2px outset #ffc107; z-index: 5; border-radius: 50px; color: white; font-size: 30px;text-shadow: 2px 2px 5px black"> <i class="fas fa-fw fa-book-open"></i> Lessons </button> </a><a href="games/index.html" rel="external"> <button class="btn btn-lg  animated pulse infinite" style="background-image:linear-gradient(to bottom, orange, yellow);transform: rotate(20deg); margin: 8px; border: 2px outset #ffc107; z-index: 5; border-radius: 50px; color: white; font-size: 30px;text-shadow: 2px 2px 5px black"> <i class="fas fa-fw fa-gamepad"></i> Activities</button> </a><a href="online/index.html" rel="external"><button class="btn btn-lg  animated pulse infinite" style="background-image:linear-gradient(to bottom, orange, yellow); transform: rotate(20deg); margin: 8px; border: 2px outset #ffc107; z-index: 5; border-radius: 50px; color: white; font-size: 30px;text-shadow: 2px 2px 5px black"> <i class="fas fa-fw fa-globe"></i>Go Online</button></a>',
+          backdrop: `rgba(0,0,0,0.4)
+                    url("")
+                    center left
+                    no-repeat`
+        })
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- LANDING PAGE --------------------------------------------------------------------- -->
+        <!-- <div data-role="page" id="landing" style="background-image: linear-gradient(to bottom, #7714d1, #7714d1, #0076ff, #00a7ff, #00cdea, #12ebc5);" class="hyperX"> -->
+        <div data-role="page" id="landing" style="" class="hero-bkg-animated hyperX">
+
+            <div style="height: 45%;transform: rotate(-10deg)">
+                <center>
+                    <br><br>
+                    <img class="animated pulse infinite" src="img/SciHive.png" width="90%">
+                </center>
+            </div>
+
+            <div style="width: 115%; margin-left:-7%; height: 20%; background-image: url(img/bee1.gif); background-size: 50% auto; background-repeat: no-repeat; background-position: center;">
+                <div style="padding: 5px">  
+                    <center>
+                        <div onclick="popperu()" style="background-color: #997b22b0; background-image: url(img/hexellence.png); border: 5px dotted #ffc107; height: 100px; width: 100px; border-radius: 50%; padding-top: 5px;" class="glow">
+                            <img class="animated pulse tada infinite" src="img/fing.png" width="80px">
+                        </div>
+                    </center>
+                </div>
+            </div>
+
+            <div style="height: 35%; overflow: hidden; background-image: url(img/doctor.png); background-size:100%; background-position: center top; background-repeat: no-repeat;">
+
+                        <img src="img/idea bulb.gif" style="transform: rotate(30deg); margin-left: 38%">
+                    
+                    <p style="position: fixed;bottom: 2%; left: 5%; color: salmon; font-size: 15px"> <i class="fas fa-fw fa-bug"></i> crzn.io™ | 2019</p>
+            </div>
+            
+            
+        </div>
+
+<!-- END OF LANDING PAGE -------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<script type="text/javascript" src="vendor/own.js"> </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script crossorigin type="text/javascript" src="vendor/sweetalert2.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

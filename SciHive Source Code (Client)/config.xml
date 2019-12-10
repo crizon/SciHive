@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+    <widget id="io.crzn.scihive" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SciHive</name>
+    <description>
+        Mobile E-Learning Platform for Science Subject of Grade 7 Students, Columban College, Olongapo City.
+    </description>
+    <author email="crizon.jr@gmail.com" href="http://crzn.online">
+        crzn.io
+    </author>
+    <content src="games/index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+		<preference name="SplashMaintainAspectRatio" value="true"/>
+		<preference name="SplashShowOnlyFirstTime" value="true"/>
+		<icon density="ldpi" src="res/icon/android/ldpi.png"/>
+		<icon density="mdpi" src="res/icon/android/mdpi.png"/>
+		<icon density="hdpi" src="res/icon/android/hdpi.png"/>
+		<icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
+		<icon density="xxhdpi" src="res/icon/android/xxhdpi.png"/>
+		<icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png"/>
+		<!--  Portrait  -->
+        <splash density="hdpi" src="res/screen/android/splash-port-hdpi.png" />
+        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+        <splash density="ldpi" src="res/screen/android/splash-port-ldpi.png" />
+        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+        <splash density="mdpi" src="res/screen/android/splash-port-mdpi.png" />
+        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+        <splash density="xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+        <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+
+    </platform>
+    <preference name="orientation" value="portrait" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="LoadingDialog" value="Loading,We're loading files and resources for you."/>
+    <plugin name="phonegap-plugin-barcodescanner" spec="8.1.0">
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.1.1" />
+    </plugin>
+    
+</widget>
