@@ -14,7 +14,7 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-android": "^8.1.0",
-        "cordova-plugin-inappbrowser": "^3.0.0",
+        "cordova-plugin-inappbrowser": "^3.1.0",
         "cordova-plugin-screen-orientation": "^3.0.1",
         "cordova-plugin-splashscreen": "^5.0.3",
         "cordova-plugin-tts": "^0.2.3",
